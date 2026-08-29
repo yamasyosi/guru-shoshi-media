@@ -89,21 +89,37 @@ a{color:inherit;text-decoration:none;}
 /* ---------- Hero ---------- */
 .hero{
   position:relative;
-  background:
-    radial-gradient(1200px 500px at 85% -10%, rgba(46,125,214,0.35), transparent 60%),
-    linear-gradient(160deg, var(--navy) 0%, var(--blue-deep) 55%, var(--blue) 100%);
   color:#fff;
   overflow:hidden;
+  background-color:var(--navy);
+  /* 軽量なJPEGをまず指定し、対応ブラウザではより軽いWebPに差し替える */
+  background-image:url("../images/hero-bg.jpg");
+  background-size:cover;
+  background-position:center 30%;
+  background-repeat:no-repeat;
+}
+@supports (background-image: image-set(url("../images/hero-bg.webp") 1x)){
+  .hero{
+    background-image:image-set(url("../images/hero-bg.webp") 1x);
+  }
+}
+/* 写真の上に敷く可読性確保用オーバーレイ（濃紺〜ブルーのグラデーション） */
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(46,125,214,0.30), transparent 60%),
+    linear-gradient(160deg, rgba(9,33,59,0.94) 0%, rgba(13,53,102,0.91) 55%, rgba(21,84,161,0.86) 100%);
+  pointer-events:none;
 }
 .hero::before{
-  content:"";position:absolute;inset:0;
+  content:"";position:absolute;inset:0;z-index:2;
   background-image:
     radial-gradient(circle at 12% 30%, rgba(255,255,255,0.10) 0, transparent 40%),
     radial-gradient(circle at 90% 75%, rgba(242,169,59,0.18) 0, transparent 45%);
   pointer-events:none;
 }
 .hero .wrap{
-  position:relative;
+  position:relative;z-index:3;
   padding:76px 24px 64px;
   display:grid;
   gap:28px;
