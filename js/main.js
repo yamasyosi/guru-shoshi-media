@@ -36,3 +36,32 @@ function escapeHtml(str) {
 function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
+
+/* ---- モバイル用ハンバーガーメニュー ---- */
+(function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("siteNav");
+  if (!toggle || !nav) return;
+
+  function closeNav() {
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
+
+  document.addEventListener("click", (e) => {
+    if (!nav.classList.contains("open")) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    closeNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 680) closeNav();
+  });
+})();
