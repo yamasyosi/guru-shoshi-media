@@ -29,6 +29,35 @@
       .map((p) => `<p>${escapeHtml(p)}</p>`)
       .join("");
 
+    // 複数写真がある場合はギャラリー表示、なければ単一写真を表示
+    const gallery = Array.isArray(report.photos) && report.photos.length > 0 ? report.photos : null;
+
+    const photoHtml = gallery
+      ? `
+      <div class="article-photo">
+        <img src="${escapeHtml(gallery[0].url)}" alt="${escapeHtml(gallery[0].caption || report.shopName)}" loading="eager" />
+      </div>
+      ${
+        gallery.length > 1
+          ? `<div class="photo-gallery">
+              ${gallery
+                .slice(1)
+                .map(
+                  (p) => `
+                <figure>
+                  <img src="${escapeHtml(p.url)}" alt="${escapeHtml(p.caption || report.shopName)}" loading="lazy" />
+                  ${p.caption ? `<figcaption>${escapeHtml(p.caption)}</figcaption>` : ""}
+                </figure>`
+                )
+                .join("")}
+            </div>`
+          : ""
+      }`
+      : `
+      <div class="article-photo">
+        <img src="${escapeHtml(report.photo)}" alt="${escapeHtml(report.shopName)}" loading="eager" />
+      </div>`;
+
     root.innerHTML = `
       <nav class="breadcrumb">
         <a href="index.html">トップ</a> ／ <a href="index.html#reports">食レポ一覧</a> ／ ${escapeHtml(report.shopName)}
@@ -43,9 +72,7 @@
         </div>
       </header>
 
-      <div class="article-photo">
-        <img src="${escapeHtml(report.photo)}" alt="${escapeHtml(report.shopName)}" />
-      </div>
+      ${photoHtml}
 
       <section class="review-block">
         <div class="label">
