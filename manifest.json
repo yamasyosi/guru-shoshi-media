@@ -1,0 +1,13 @@
+{
+  "name": "グル書士のレストラン道",
+  "short_name": "グル書士",
+  "description": "グルメ司法書士（グル書士）の食レポ",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0b2a4a",
+  "theme_color": "#0b2a4a",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
