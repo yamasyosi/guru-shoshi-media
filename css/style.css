@@ -186,6 +186,7 @@ a{color:inherit;text-decoration:none;}
   font-weight:700;
 }
 .hero h1 .accent{color:var(--accent);}
+.hero .marker{color:var(--navy);}
 .hero p.lead{
   max-width:640px;
   font-size:16px;
