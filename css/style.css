@@ -455,6 +455,62 @@ a{color:inherit;text-decoration:none;}
 }
 .qa-item .q{font-weight:800;color:var(--blue-deep);margin-bottom:8px;display:flex;gap:8px;}
 .qa-item .a{color:var(--ink-soft);font-size:14.5px;margin-left:26px;}
+.qa-item.qa-weird{border:2px dashed var(--accent);background:#fffaf0;}
+.qa-item.qa-weird .q{color:var(--accent-deep);}
+
+/* ---------- コミカル文字装飾ユーティリティ（プロフィールページ用） ---------- */
+.shout{
+  display:inline-block;font-size:1.3em;font-weight:900;color:var(--accent-deep);
+  transform:rotate(-1deg);
+}
+.shout-blue{
+  display:inline-block;font-size:1.2em;font-weight:900;color:var(--blue);
+}
+.whisper{
+  font-size:0.78em;color:var(--ink-soft);font-style:italic;
+}
+.marker{
+  background-image:linear-gradient(120deg, rgba(242,169,59,0.45) 0%, rgba(242,169,59,0.45) 100%);
+  background-repeat:no-repeat;background-size:100% 42%;background-position:0 88%;
+  padding:0 3px;font-weight:700;
+}
+.marker-blue{
+  background-image:linear-gradient(120deg, rgba(26,95,180,0.18) 0%, rgba(26,95,180,0.18) 100%);
+  background-repeat:no-repeat;background-size:100% 42%;background-position:0 88%;
+  padding:0 3px;font-weight:700;color:var(--blue-deep);
+}
+.joke-strike{text-decoration:line-through;text-decoration-color:#c0392b;color:var(--ink-soft);opacity:.75;}
+.wobble-tag{
+  display:inline-block;background:var(--navy);color:#fff;font-size:11px;font-weight:800;
+  padding:2px 9px;border-radius:999px;transform:rotate(-3deg);margin:0 3px;vertical-align:middle;
+}
+
+/* ---------- スキルバッジ（得意分野） ---------- */
+.skill-badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;}
+.skill-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--blue-pale);color:var(--blue-deep);
+  font-weight:800;font-size:13.5px;padding:8px 16px;border-radius:999px;
+  border:1px solid var(--blue-line);
+}
+
+/* ---------- グル書士ステータスカード（RPG風パラメーター） ---------- */
+.status-card{
+  background:linear-gradient(160deg, var(--navy), var(--blue-deep));
+  border-radius:var(--radius-lg);padding:26px 28px;color:#fff;box-shadow:var(--shadow);
+  margin-top:18px;
+}
+.status-card h4{
+  margin:0 0 16px;font-family:var(--serif);font-size:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.status-row{display:grid;grid-template-columns:150px 1fr 56px;gap:12px;align-items:center;margin-bottom:12px;}
+.status-row:last-child{margin-bottom:0;}
+.status-label{font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);}
+.status-bar{height:10px;border-radius:999px;background:rgba(255,255,255,0.15);overflow:hidden;}
+.status-fill{height:100%;border-radius:999px;background:linear-gradient(90deg, var(--accent), var(--accent-deep));}
+.status-fill.over{background:linear-gradient(90deg, #ff8a5c, #e0891a);}
+.status-value{font-size:12.5px;font-weight:800;color:var(--accent);text-align:right;}
 
 /* ---------- misc ---------- */
 .loading, .empty-state{
@@ -472,6 +528,8 @@ a{color:inherit;text-decoration:none;}
   .profile-hero .avatar-lg{margin:0 auto;}
   .timeline li{grid-template-columns:1fr;}
   .cta-block{flex-direction:column;align-items:flex-start;}
+  .status-row{grid-template-columns:1fr;gap:6px;}
+  .status-value{text-align:left;}
 }
 @media (max-width:680px){
   .site-header .wrap{position:relative;flex-wrap:nowrap;}
