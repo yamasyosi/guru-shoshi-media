@@ -15,11 +15,11 @@
           <p>指定された食レポが見つかりませんでした。</p>
           <p><a href="index.html" class="btn btn-solid" style="margin-top:12px;">トップへ戻る</a></p>
         </div>`;
-      document.title = "記事が見つかりません｜グルメ司法書士の極上レストランナビ";
+      document.title = "記事が見つかりません｜グルメ司法書士のレストランナビ";
       return;
     }
 
-    document.title = `${report.title}｜グルメ司法書士の極上レストランナビ`;
+    document.title = `${report.title}｜グルメ司法書士のレストランナビ`;
 
     const mapSrc = report.mapEmbedUrl
       ? report.mapEmbedUrl
