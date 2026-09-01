@@ -126,6 +126,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>訪れたお店の数だけ、真剣勝負があります。新しい食レポは随時追加中です。</p>
     </div>
 
+    <div class="area-filter" id="areaFilter" aria-label="エリアで絞り込む">
+      <div class="area-filter-head">
+        <span class="area-filter-label">📍 エリアで絞り込む</span>
+        <button type="button" class="area-filter-clear" id="areaFilterClear" hidden>✕ 絞り込み解除</button>
+      </div>
+      <div class="area-filter-row" id="areaFilterPrefectures"></div>
+      <div class="area-filter-row area-filter-row-wards" id="areaFilterWards" hidden></div>
+      <p class="area-filter-count" id="areaFilterCount"></p>
+    </div>
+
     <div class="card-grid" id="report-grid">
       <p class="loading">食レポを読み込み中…</p>
     </div>

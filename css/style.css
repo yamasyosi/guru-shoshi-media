@@ -259,6 +259,47 @@ a{color:inherit;text-decoration:none;}
   flex-shrink:0;
 }
 
+/* ---------- Area filter (エリア絞り込み) ---------- */
+.area-filter{
+  background:var(--paper);border:1px solid var(--blue-line);
+  border-radius:var(--radius-lg);padding:20px 22px;
+  box-shadow:var(--shadow-sm);margin-bottom:28px;
+}
+.area-filter-head{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;margin-bottom:12px;
+}
+.area-filter-label{font-weight:800;color:var(--navy);font-size:14px;}
+.area-filter-clear{
+  background:none;border:1px solid var(--blue-line);color:var(--blue-deep);
+  font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;cursor:pointer;
+  transition:background .15s ease;
+}
+.area-filter-clear:hover{background:var(--blue-pale);}
+.area-filter-row{display:flex;flex-wrap:wrap;gap:8px;}
+.area-filter-row-wards{
+  margin-top:10px;padding-top:10px;border-top:1px dashed var(--blue-line);
+}
+.area-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--blue-pale);color:var(--blue-deep);
+  border:1px solid var(--blue-line);font-size:13px;font-weight:700;
+  padding:7px 14px;border-radius:999px;cursor:pointer;
+  transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.area-pill:hover{background:#dcebfb;}
+.area-pill.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+.area-pill-sub{font-size:12.5px;padding:6px 12px;}
+.area-pill-count{
+  font-size:11px;font-weight:800;opacity:.75;
+  background:rgba(255,255,255,0.6);color:inherit;
+  padding:1px 6px;border-radius:999px;
+}
+.area-pill.active .area-pill-count{background:rgba(255,255,255,0.25);}
+.area-filter-count{
+  margin:12px 0 0;font-size:12.5px;color:var(--ink-soft);font-weight:600;
+}
+
 /* ---------- Article cards ---------- */
 .card-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
