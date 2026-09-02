@@ -151,63 +151,60 @@
   }
 })();
 
-/* ---- 見出し「司法書士なのに、なぜか本気で食レポする。」：スワイプでホバー風マーカーを引くギミック ---- */
+/* ---- 見出し「司法書士なのに、なぜか本気で食レポする。」：文字自体がぷるんと弾むギミック ---- */
 (function () {
   const headline = document.getElementById("heroHeadline");
-  const marker = headline ? headline.querySelector(".hero-marker") : null;
-  if (!headline || !marker) return;
+  if (!headline) return;
 
-  let currentPct = 0;
+  /** テキストノードを1文字ずつ <span class="ch"> に分解し、順番にアニメ遅延をつける */
+  function wrapChars(node, counter) {
+    Array.from(node.childNodes).forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const frag = document.createDocumentFragment();
+        for (const ch of child.textContent) {
+          const span = document.createElement("span");
+          span.className = "ch";
+          span.style.animationDelay = `${counter.i * 35}ms`;
+          span.textContent = ch;
+          counter.i += 1;
+          frag.appendChild(span);
+        }
+        node.replaceChild(frag, child);
+      } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName !== "BR") {
+        wrapChars(child, counter);
+      }
+    });
+  }
+  wrapChars(headline, { i: 0 });
 
-  function setReveal(pct, withTransition) {
-    currentPct = Math.max(0, Math.min(100, pct));
-    marker.classList.toggle("no-transition", !withTransition);
-    marker.style.width = `${currentPct}%`;
-    headline.classList.toggle("marker-active", currentPct >= 40);
+  /** クラスの付け外し＋reflowで、何度でも同じアニメを再生できるようにする */
+  function playBounce() {
+    headline.classList.remove("bounce-play");
+    void headline.offsetWidth;
+    headline.classList.add("bounce-play");
   }
 
-  /** PCのマウスhoverを邪魔しないよう、非操作時はインラインstyleを完全に外してCSSに委ねる */
-  function clearReveal(withTransition) {
-    currentPct = 0;
-    marker.classList.toggle("no-transition", !withTransition);
-    marker.style.removeProperty("width");
-    headline.classList.remove("marker-active");
-  }
+  // サイトを開いたら（スクロール不要）、少し間を置いて自動で1回再生
+  setTimeout(playBounce, 500);
 
+  // スワイプ（横方向に一定量動かす）でも再生できるようにしておく
   let startX = null;
-  let dragging = false;
-
-  function onStart(x) {
-    startX = x;
-    dragging = true;
-    setReveal(0, false);
-  }
-  function onMove(x) {
-    if (!dragging || startX == null) return;
-    const dx = x - startX;
-    const width = headline.getBoundingClientRect().width || 1;
-    setReveal((dx / width) * 100, false);
-  }
-  function onEnd() {
-    if (!dragging) return;
-    dragging = false;
-    startX = null;
-    if (currentPct >= 40) {
-      setReveal(100, true);
-      setTimeout(() => clearReveal(true), 1400);
-    } else {
-      clearReveal(true);
-    }
-  }
-
-  headline.addEventListener("touchstart", (e) => onStart(e.touches[0].clientX), { passive: true });
-  headline.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
-  headline.addEventListener("touchend", onEnd);
-  headline.addEventListener("touchcancel", onEnd);
-
-  // 初回のみ、スワイプで反応することに気づいてもらうためのヒント演出
-  setTimeout(() => {
-    setReveal(100, true);
-    setTimeout(() => clearReveal(true), 1200);
-  }, 900);
+  headline.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+  headline.addEventListener(
+    "touchend",
+    (e) => {
+      if (startX == null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      const width = headline.getBoundingClientRect().width || 1;
+      if (Math.abs(dx) / width >= 0.25) playBounce();
+      startX = null;
+    },
+    { passive: true }
+  );
 })();
