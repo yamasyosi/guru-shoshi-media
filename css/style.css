@@ -509,6 +509,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- Profile page ---------- */
 .profile-hero{
+  position:relative;
   background:linear-gradient(160deg, var(--navy), var(--blue-deep));
   color:#fff;padding:64px 0;
 }
@@ -554,6 +555,7 @@ a{color:inherit;text-decoration:none;}
 
 .qa-grid{display:grid;gap:16px;}
 .qa-item{
+  position:relative;
   background:var(--paper);border:1px solid var(--blue-line);border-radius:var(--radius-md);
   padding:20px 22px;box-shadow:var(--shadow-sm);
 }
@@ -742,4 +744,81 @@ a{color:inherit;text-decoration:none;}
     left:auto;right:24px;bottom:24px;
     max-width:300px;
   }
+}
+
+/* ============================================================
+   プロフィールページ：スクロール／スワイプで発動する演出ギミック集
+   ============================================================ */
+
+/* 汎用：ポップイン（スケール＋フェード） */
+.gm-pop-init{opacity:0;transform:scale(.35) rotate(0deg);}
+.gm-pop-play{animation:gmPop .7s cubic-bezier(.34,1.56,.64,1) forwards;}
+@keyframes gmPop{
+  0%{opacity:0;transform:scale(.35) rotate(0deg);}
+  60%{opacity:1;transform:scale(1.12) rotate(0deg);}
+  100%{opacity:1;transform:scale(1) rotate(0deg);}
+}
+
+/* 1. プロフィール大アバター：くるっと弾んで登場 */
+.avatar-lg.gm-pop-init{transform:scale(.35) rotate(-25deg);}
+.avatar-lg.gm-pop-play{animation:gmAvatarPop .8s cubic-bezier(.34,1.56,.64,1) forwards;}
+@keyframes gmAvatarPop{
+  0%{opacity:0;transform:scale(.35) rotate(-25deg);}
+  60%{opacity:1;transform:scale(1.1) rotate(6deg);}
+  100%{opacity:1;transform:scale(1) rotate(0deg);}
+}
+
+/* 2. 「（※本人はいたって大真面目です）」ほか：ぷるぷる揺れる */
+.gm-shake-play{animation:gmShake .6s ease;}
+@keyframes gmShake{
+  0%,100%{transform:translateX(0) rotate(0);}
+  20%{transform:translateX(-4px) rotate(-3deg);}
+  40%{transform:translateX(4px) rotate(3deg);}
+  60%{transform:translateX(-3px) rotate(-2deg);}
+  80%{transform:translateX(3px) rotate(2deg);}
+}
+
+/* 3・4・9. スクロールで文字に線を引く（下線マーカー／取り消し線 強調） */
+.gm-draw-line{
+  position:absolute;
+  border-radius:3px;
+  width:0;
+  pointer-events:none;
+  z-index:5;
+  transition:width 1s cubic-bezier(.22,.85,.28,1);
+}
+.gm-draw-line.gm-line-gold{background:linear-gradient(90deg, var(--accent), #ff7a59);box-shadow:0 0 12px rgba(242,169,59,.6);}
+.gm-draw-line.gm-line-blue{background:linear-gradient(90deg, var(--blue), var(--blue-deep));box-shadow:0 0 10px rgba(26,95,180,.45);}
+.gm-draw-line.gm-line-red{background:linear-gradient(90deg, #e74c3c, #c0392b);box-shadow:0 0 10px rgba(192,57,43,.5);}
+
+/* 5. 肩書タグ（開業ナシ／勤務中／個人受任アリ）：時間差でぽこぽこ登場 */
+.wobble-tag.gm-pop-init{opacity:0;transform:scale(.3) rotate(-3deg);}
+.wobble-tag.gm-pop-play{animation:gmTagPop .6s cubic-bezier(.34,1.56,.64,1) forwards;}
+@keyframes gmTagPop{
+  0%{opacity:0;transform:scale(.3) rotate(-3deg);}
+  60%{opacity:1;transform:scale(1.2) rotate(-3deg);}
+  100%{opacity:1;transform:scale(1) rotate(-3deg);}
+}
+
+/* 6. ステータスカードの数値バー：伸びながらカウントアップ */
+.status-fill{transition:width 1.1s cubic-bezier(.22,.85,.28,1);}
+
+/* 7. 得意分野スキルバッジ：時間差でぽこぽこ登場（.gm-popを流用） */
+
+/* 8. あゆみタイムライン：スクロールで1件ずつスライドイン */
+.timeline li.gm-slide-init{opacity:0;transform:translateX(-40px);}
+.timeline li.gm-slide-play{animation:gmSlideIn .7s cubic-bezier(.22,.85,.28,1) forwards;}
+@keyframes gmSlideIn{
+  0%{opacity:0;transform:translateX(-40px);}
+  100%{opacity:1;transform:translateX(0);}
+}
+
+/* 10. 「大丈夫か案件」QA：見えたらちょっと動揺したように震える */
+.qa-weird.gm-shake-play{animation:gmWeirdShake .5s ease;}
+@keyframes gmWeirdShake{
+  0%,100%{transform:translateX(0) rotate(0);}
+  15%{transform:translateX(-6px) rotate(-1.2deg);}
+  35%{transform:translateX(6px) rotate(1.2deg);}
+  55%{transform:translateX(-4px) rotate(-.8deg);}
+  75%{transform:translateX(4px) rotate(.8deg);}
 }
