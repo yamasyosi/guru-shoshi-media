@@ -37,6 +37,21 @@ function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
+/**
+ * 「グルメ司法書士の胃袋«登記»ランキング」の★表示HTMLを生成する。
+ * rating は 0〜5 の数値（0.5刻み推奨）。未指定の記事は表示しない。
+ */
+function renderStars(rating) {
+  const r = Math.max(0, Math.min(5, Number(rating) || 0));
+  const pct = (r / 5) * 100;
+  return `
+    <div class="rating-block" role="img" aria-label="グルメ司法書士の胃袋登記ランキング：5点満点中${r}点">
+      <span class="rating-label">グルメ司法書士の胃袋«登記»ランキング</span>
+      <span class="stars" style="--rating-pct:${pct}%">★★★★★</span>
+      <span class="rating-value">${r.toFixed(1)}</span>
+    </div>`;
+}
+
 /* ---- モバイル用ハンバーガーメニュー ---- */
 (function () {
   const toggle = document.querySelector(".nav-toggle");

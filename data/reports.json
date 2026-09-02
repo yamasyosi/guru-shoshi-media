@@ -17,7 +17,8 @@
       "総評：業務なら即決裁、食事なら即リピート案件。次回は「相続登記」ならぬ「大盛り登記」で挑みたい。"
     ],
     "mapQuery": "東京都千代田区神田神保町 洋食レストラン",
-    "officialUrl": "https://example.com/sanchome-kitchen"
+    "officialUrl": "https://example.com/sanchome-kitchen",
+    "rating": 4.5
   },
   {
     "slug": "yakitori-shin-nakameguro",
@@ -37,7 +38,8 @@
       "総評：この店の焼鳥はすべて「原本」。コピー、すなわち他店の模倣では絶対に再現できない一本を、ぜひ本人確認のつもりで食べに行ってほしい。"
     ],
     "mapQuery": "東京都目黒区中目黒 焼鳥",
-    "officialUrl": "https://example.com/yakitori-shin"
+    "officialUrl": "https://example.com/yakitori-shin",
+    "rating": 3.5
   },
   {
     "slug": "kuramae-an-soba",
@@ -57,7 +59,8 @@
       "総評：無駄のない構成美に惚れた。次は「変更前」と「変更後」、つまり大盛りと普通盛りを食べ比べてみたい。"
     ],
     "mapQuery": "東京都台東区蔵前 蕎麦",
-    "officialUrl": "https://example.com/kuramae-an"
+    "officialUrl": "https://example.com/kuramae-an",
+    "rating": 4.5
   },
   {
     "slug": "bella-notte-okubo",
@@ -92,7 +95,8 @@
       "そういえばこの「ベラノッテ」、タイミングが合えばあのローランドが食事に来ていることもあるという噂を耳にした。もし本当に出くわしたら、私はきっとこう言ってしまうだろう。「今度、あなたを登記したい。」——権利者は私、義務者はローランドさん、登記原因は「一目惚れ」。そんな不動産登記は、さすがに法務局も受理してくれないだろうけれど。"
     ],
     "mapQuery": "東京都新宿区百人町1丁目18-4 キャピタルプラザ1F BELLANOTTE 大久保店",
-    "officialUrl": "https://bellanotte.jp/"
+    "officialUrl": "https://bellanotte.jp/",
+    "rating": 4
   },
   {
     "slug": "sanada-ginza-six",
@@ -133,7 +137,8 @@
       "総評：蕎麦もだし巻きも小鉢も、間違いなく一流。ただし今回最大の学びは、料理の味以上に「善意による無償譲渡は、後から必ず利息付きの後悔を生む」という人生の教訓だった。次回訪問時は、舞茸天の所有権を何があっても固く保持し、最後の一片まで自らの手で完食したい。今回の“舞茸天譲渡契約”については、履行はしたものの、正式にここで申し添えておく——不履行を心から悔やんでいる、と。"
     ],
     "mapQuery": "東京都中央区銀座6-10-1 GINZA SIX B2F そば 真田",
-    "officialUrl": "https://ginza6.tokyo/shops/detail/2606002?tenant_cd=2606002"
+    "officialUrl": "https://ginza6.tokyo/shops/detail/2606002?tenant_cd=2606002",
+    "rating": 5
   },
   {
     "slug": "sakushuan-kagurazaka",
@@ -174,7 +179,8 @@
       "総評：隠れ家として文句なしにおすすめできる一軒。次回訪問時こそ、舞茸天の存在を事前に確認したうえで、その権利取得（＝完食）を必ず成し遂げたい。そして椅子については、どうか安全配慮義務の観点から、今一度ご検討いただければ幸いである。"
     ],
     "mapQuery": "東京都新宿区神楽坂 蕎麦 作州庵",
-    "officialUrl": "https://sakushu-an.com/"
+    "officialUrl": "https://sakushu-an.com/",
+    "rating": 4.5
   },
   {
     "slug": "bulgari-lounge-tokyo",
@@ -218,7 +224,8 @@
       "総評：料理も空間も接客も、間違いなく一流。ただし今回最大の学びは、司法書士の報酬体系とラグジュアリーホテルの会計は、まったく別の法体系で動いているという厳しい現実だった。次回訪問時は、抵当権抹消登記をきっちり2件完了させてから、その報酬を丸ごと持って、自分へのご褒美——もとい戦利品として、堂々とこのラウンジに舞い戻りたい。"
     ],
     "mapQuery": "東京都中央区八重洲2-2-1 東京ミッドタウン八重洲 ブルガリ ホテル 東京",
-    "officialUrl": "https://www.bulgarihotels.com/ja_JP/tokyo/dining/the-bulgari-lounge"
+    "officialUrl": "https://www.bulgarihotels.com/ja_JP/tokyo/dining/the-bulgari-lounge",
+    "rating": 3.5
   },
   {
     "slug": "mizunara-in-tokyo",
@@ -263,7 +270,8 @@
       "総評：バーという未知の法廷における単独審理は、思いのほど緊張したが、マスターの的確な“補正指示”のおかげで大きな損害もなく無事結審。次回はもう少し場数を踏んだ「バー中堅書士」として、裏メニューにも臆せず挑みたい。"
     ],
     "mapQuery": "東京都新宿区神楽坂3-11 MIZUNARA IN TOKYO",
-    "officialUrl": "https://mizunaraintokyo.com/"
+    "officialUrl": "https://mizunaraintokyo.com/",
+    "rating": 4
   },
   {
     "slug": "takahashi-ramen-kabukicho",
@@ -307,7 +315,8 @@
       "総評：焼きあご塩らーめんは間違いなく名店級の一杯。次回訪問時は、戸籍の『髙』の表記確認と同じくらいの本気度で、自分も味玉トッピングをためらいなく申請したい。"
     ],
     "mapQuery": "東京都新宿区歌舞伎町1丁目19-3 歌舞伎町商店街振興組合ビル1F 焼きあご塩らーめん たかはし",
-    "officialUrl": "https://takahashi-ramen.com/"
+    "officialUrl": "https://takahashi-ramen.com/",
+    "rating": 4
   },
   {
     "slug": "kurazushi-okachimachi",
@@ -349,7 +358,8 @@
       "【主文】　主文、以下のとおり判決する。一、被告物件「TAKEYA2」の正体については、看板一枚から多角的に考察を尽くしたものの、なお証拠不十分のため、判断を留保する。二、原告（私）による軍艦巻きへの専有権主張は、私的自治の原則に基づき、これを認める。三、全メニュー完食請求については、履行不能のおそれが高いことに鑑み、棄却する。ただし、コーン軍艦とかにマヨ軍艦の美味しさについては、当法廷において全会一致で認定する。"
     ],
     "mapQuery": "東京都台東区上野 御徒町 くら寿司",
-    "officialUrl": "https://shop.kurasushi.co.jp/detail/658"
+    "officialUrl": "https://shop.kurasushi.co.jp/detail/658",
+    "rating": 4
   },
   {
     "slug": "jinghua-ginza",
@@ -393,7 +403,8 @@
       "総評：銀座の隠れ家で絶品中華に舌鼓。僕の胃袋も、スリーボンドの強力接着剤並みにこの店へすっかり心を固められてしまった。なお、私の司法書士としての業務知識も、この担々麺くらい濃厚かつ強固に保持しておりますので、どうぞご安心ください（？）笑。"
     ],
     "mapQuery": "東京都中央区銀座5丁目9-6 京華小吃 ジンホア 銀座店",
-    "officialUrl": "https://jinghua-shop.com/ginza/index.html"
+    "officialUrl": "https://jinghua-shop.com/ginza/index.html",
+    "rating": 4.5
   },
   {
     "slug": "xex-atago-green-hills",
@@ -437,7 +448,8 @@
       "総評：42階の絶景と極上メロンにすっかり翻弄された挙句、この神対応と圧倒的コスパを前にして、もはや取れる法的手段は一つしかなかった。「損害賠償請求」ならぬ「感謝の意の即時履行」——この場を借りて、静かに、しかし確実に履行しておきたい。"
     ],
     "mapQuery": "東京都港区愛宕2丁目5-1 愛宕グリーンヒルズ MORIタワー42F XEX ATAGO GREEN HILLS",
-    "officialUrl": "https://www.xexgroup.jp/news/260527-xex-summer-melon-buffet-2026/"
+    "officialUrl": "https://www.xexgroup.jp/news/260527-xex-summer-melon-buffet-2026/",
+    "rating": 4.5
   },
   {
     "slug": "sorano-shibuya",
@@ -481,7 +493,8 @@
       "総評：豆腐料理店という看板の表示を鵜呑みにしていると、思わぬところで判決が覆る。この店に関しては、アスパラガスへの即決注文だけは自信を持って勝訴を主張したい。次回は日本酒とアスパラの完全勝訴を目指して再訪確定である。"
     ],
     "mapQuery": "東京都渋谷区 豆腐料理 空野 渋谷店",
-    "officialUrl": "https://www.foodgate.net/shop/sorano"
+    "officialUrl": "https://www.foodgate.net/shop/sorano",
+    "rating": 4.5
   },
   {
     "slug": "hatsuhana-hakone",
@@ -520,7 +533,8 @@
       "総評：自然薯そばの粘り強さと深い甘みに免責決定。あの置き去りにされた数分間のショックも、蕎麦を一口すすった瞬間に即決で帳消しとなった。時効が成立する前に記録しておくが、次回の箱根旅では、車の誘導は同行者に任せて、私は先に助手席で大人しくしていようと思う。"
     ],
     "mapQuery": "神奈川県足柄下郡箱根町湯本635 はつ花そば本店",
-    "officialUrl": "http://www.hatsuhana.co.jp/"
+    "officialUrl": "http://www.hatsuhana.co.jp/",
+    "rating": 3.5
   },
   {
     "slug": "koyasudonouka-nikko",
@@ -560,7 +574,8 @@
       "総評：蕎麦も湯葉も、そして古民家の空気感も、間違いなく一級品。ただし今回最大の学びは、蕎麦の美味さに油断すると、シェア料理の権利関係はあっという間に崩れるという教訓だった。次回訪問時は、同時履行の原則を徹底し、蕎麦と湯葉を交互に、きっちりイコールのタイミングで口に運びたい。"
     ],
     "mapQuery": "栃木県日光市小林71 小休止のうか",
-    "officialUrl": "https://www.koyasudonouka.com/"
+    "officialUrl": "https://www.koyasudonouka.com/",
+    "rating": 3.5
   },
   {
     "slug": "noran-ebisu",
@@ -599,7 +614,8 @@
       "総評：夜景、料理、ワイン、そして予期せぬライブ演出のおまけまで付いた、非の打ちどころのない夜だった。ただし「ビビン麺」の看板だけは、次に訪れる人のためにも一言申し添えておきたい。あれは、ビビンバの気持ちで挑む相手ではない。"
     ],
     "mapQuery": "東京都渋谷区恵比寿4丁目20-3 恵比寿ガーデンプレイスタワー39階 NORAN",
-    "officialUrl": "https://noran.jp/"
+    "officialUrl": "https://noran.jp/",
+    "rating": 4.5
   },
   {
     "slug": "kawakamian-karuizawa",
@@ -638,7 +654,8 @@
       "行きは秋風を感じながら気持ちよく歩いたものの、帰りはお腹いっぱいでとてもそんな余力はなく、素直にタクシーを呼んでしまったことも、正直に申告しておく。次は麻布十番店にも足を運び、この軽井沢での感動を即決で再現しにいきたい。"
     ],
     "mapQuery": "長野県北佐久郡軽井沢町軽井沢6-10 川上庵本店",
-    "officialUrl": "https://www.kawakamian.com/shops/karuizawa.php"
+    "officialUrl": "https://www.kawakamian.com/shops/karuizawa.php",
+    "rating": 4
   },
   {
     "slug": "sanoya-sano-ramen",
@@ -677,7 +694,8 @@
       "総評：佐野ラーメンの実力は間違いなく本物。ただし今回に関しては、その旨さをじっくり立証するヒマもなく、次の目的地へ即決でダッシュした夜だった。この一杯の評価が「勝訴」であることだけは、時効になる前にここに記しておきたい。"
     ],
     "mapQuery": "栃木県佐野市 手打ち佐野ラーメン 佐野屋",
-    "officialUrl": "https://www.instagram.com/sanoya_sanoramen/"
+    "officialUrl": "https://www.instagram.com/sanoya_sanoramen/",
+    "rating": 4
   },
   {
     "slug": "chanoma-yokohama",
@@ -717,6 +735,7 @@
       "総評：事前の報連相を怠った連れとの冷戦状態（スネトラン事件）も、絶品ローストビーフの前では即座に和解成立。連絡一本の«事前通知»は怠っても、美味しい料理への«即決»と食欲回復の効果は絶大でした。スネトラン、ありがとう！次回はちゃんと1年も空けずに来ます。"
     ],
     "mapQuery": "神奈川県横浜市中区新港1-1-2 横浜赤レンガ倉庫2号館 chano-ma 横浜",
-    "officialUrl": "https://www.dd-holdings.jp/shops/chanoma/yokohama#/"
+    "officialUrl": "https://www.dd-holdings.jp/shops/chanoma/yokohama#/",
+    "rating": 4
   }
 ]

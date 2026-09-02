@@ -70,6 +70,7 @@
           <span class="meta-item">📅 訪問日：<b>${formatDateJP(report.visitDate)}</b></span>
           <span class="meta-item">🏮 店舗名：<b>${escapeHtml(report.shopName)}</b></span>
         </div>
+        ${report.rating != null ? renderStars(report.rating) : ""}
       </header>
 
       ${photoHtml}

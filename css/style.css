@@ -386,6 +386,26 @@ a{color:inherit;text-decoration:none;}
 .meta-row .meta-item{display:flex;align-items:center;gap:6px;font-weight:600;}
 .meta-row .meta-item b{color:var(--ink);font-weight:700;}
 
+.rating-block{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:14px;padding:10px 16px;
+  background:#fffaf0;border:1px solid #ffe6a8;border-radius:999px;
+  width:fit-content;
+}
+.rating-block .rating-label{font-size:12px;font-weight:700;color:#a6720d;}
+.rating-block .stars{
+  position:relative;display:inline-block;
+  font-size:19px;line-height:1;letter-spacing:2px;
+  color:#e2e2e2; /* 空★の色 */
+}
+.rating-block .stars::before{
+  content:"★★★★★";
+  position:absolute;top:0;left:0;
+  width:var(--rating-pct,0%);overflow:hidden;white-space:nowrap;
+  color:#ffc107; /* 塗り★の色（黄色） */
+}
+.rating-block .rating-value{font-size:13px;font-weight:700;color:#a6720d;}
+
 .article-photo{
   border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);
   margin:28px 0;aspect-ratio:16/10;background:var(--blue-pale);
