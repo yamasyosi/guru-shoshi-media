@@ -240,7 +240,7 @@
     bars.forEach((bar, i) => {
       setTimeout(() => {
         bar.style.width = bar.dataset.targetWidth;
-      }, i * 180);
+      }, i * 350);
     });
   }
 
