@@ -80,3 +80,61 @@ function renderStars(rating) {
     if (window.innerWidth > 680) closeNav();
   });
 })();
+
+/* ---- フローティングバナー：グルメ司法書士のプロフィールへの導線（キラーン演出付き） ---- */
+(function () {
+  // プロフィールページ自体には出さない
+  if (/profile\.html/i.test(window.location.pathname)) return;
+
+  const banner = document.createElement("a");
+  banner.href = "profile.html";
+  banner.className = "profile-float-banner";
+  banner.setAttribute("aria-label", "グルメ司法書士のプロフィールはこちら");
+  banner.innerHTML = `
+    <span class="pfb-avatar">
+      <img src="images/gurushoshi-avatar.jpg" alt="" />
+    </span>
+    <span class="pfb-text">
+      <strong>グルメ司法書士って、何者？</strong>
+      <span>プロフィールはこちら ▶</span>
+    </span>
+    <button type="button" class="pfb-close" aria-label="バナーを閉じる">×</button>
+  `;
+  document.body.appendChild(banner);
+
+  // 閉じるボタン：閉じたら以後このタブでは再表示しない
+  const closeBtn = banner.querySelector(".pfb-close");
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    banner.classList.remove("pfb-show");
+    banner.classList.add("pfb-hide");
+    try {
+      sessionStorage.setItem("pfbClosed", "1");
+    } catch (_) {}
+  });
+
+  let closedAlready = false;
+  try {
+    closedAlready = sessionStorage.getItem("pfbClosed") === "1";
+  } catch (_) {}
+
+  if (closedAlready) {
+    banner.classList.add("pfb-hide");
+    return;
+  }
+
+  // 登場アニメーション
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => banner.classList.add("pfb-show"));
+  });
+
+  // 「キラーン」光沢エフェクトを、登場後と一定間隔ごとに発動
+  function playShine() {
+    banner.classList.remove("pfb-shine-play");
+    void banner.offsetWidth; // reflowさせてアニメーションを再始動
+    banner.classList.add("pfb-shine-play");
+  }
+  setTimeout(playShine, 900);
+  setInterval(playShine, 6000);
+})();
