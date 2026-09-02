@@ -150,3 +150,64 @@
     console.error(e);
   }
 })();
+
+/* ---- 見出し「司法書士なのに、なぜか本気で食レポする。」：スワイプでホバー風マーカーを引くギミック ---- */
+(function () {
+  const headline = document.getElementById("heroHeadline");
+  const marker = headline ? headline.querySelector(".hero-marker") : null;
+  if (!headline || !marker) return;
+
+  let currentPct = 0;
+
+  function setReveal(pct, withTransition) {
+    currentPct = Math.max(0, Math.min(100, pct));
+    marker.classList.toggle("no-transition", !withTransition);
+    marker.style.width = `${currentPct}%`;
+    headline.classList.toggle("marker-active", currentPct >= 40);
+  }
+
+  /** PCのマウスhoverを邪魔しないよう、非操作時はインラインstyleを完全に外してCSSに委ねる */
+  function clearReveal(withTransition) {
+    currentPct = 0;
+    marker.classList.toggle("no-transition", !withTransition);
+    marker.style.removeProperty("width");
+    headline.classList.remove("marker-active");
+  }
+
+  let startX = null;
+  let dragging = false;
+
+  function onStart(x) {
+    startX = x;
+    dragging = true;
+    setReveal(0, false);
+  }
+  function onMove(x) {
+    if (!dragging || startX == null) return;
+    const dx = x - startX;
+    const width = headline.getBoundingClientRect().width || 1;
+    setReveal((dx / width) * 100, false);
+  }
+  function onEnd() {
+    if (!dragging) return;
+    dragging = false;
+    startX = null;
+    if (currentPct >= 40) {
+      setReveal(100, true);
+      setTimeout(() => clearReveal(true), 1400);
+    } else {
+      clearReveal(true);
+    }
+  }
+
+  headline.addEventListener("touchstart", (e) => onStart(e.touches[0].clientX), { passive: true });
+  headline.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
+  headline.addEventListener("touchend", onEnd);
+  headline.addEventListener("touchcancel", onEnd);
+
+  // 初回のみ、スワイプで反応することに気づいてもらうためのヒント演出
+  setTimeout(() => {
+    setReveal(100, true);
+    setTimeout(() => clearReveal(true), 1200);
+  }, 900);
+})();
