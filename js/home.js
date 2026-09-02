@@ -187,7 +187,7 @@
   // サイトを開いたら（スクロール不要）、少し間を置いて自動で1回再生
   setTimeout(playBounce, 500);
 
-  // スワイプ（横方向に一定量動かす）でも再生できるようにしておく
+  // スワイプ（横方向に一定量動かす）でも再生できるようにしておく（元のギミック）
   let startX = null;
   headline.addEventListener(
     "touchstart",
@@ -207,4 +207,58 @@
     },
     { passive: true }
   );
+})();
+
+/* ---- リード文「独立開業する勇気はないくせに…」：スクロールで見えたらマーカーで下線が引かれるギミック ---- */
+(function () {
+  const phrase = document.getElementById("giveUpLine");
+  const hero = document.querySelector(".hero");
+  if (!phrase || !hero) return;
+
+  /**
+   * 折り返しで複数行になっても、行ごとに正しい位置へ下線を引けるよう
+   * getClientRects()（1行につき1矩形）を元に実要素のバーを生成する。
+   */
+  function buildUnderlineBars() {
+    const heroRect = hero.getBoundingClientRect();
+    const lineRects = Array.from(phrase.getClientRects());
+    return lineRects.map((r) => {
+      const bar = document.createElement("span");
+      bar.className = "marker-underline-line";
+      bar.style.left = `${r.left - heroRect.left}px`;
+      bar.style.top = `${r.bottom - heroRect.top - 5}px`;
+      bar.style.width = "0px";
+      bar.dataset.targetWidth = `${r.width}px`;
+      hero.appendChild(bar);
+      return bar;
+    });
+  }
+
+  function playUnderline() {
+    const bars = buildUnderlineBars();
+    // 1行ずつ少し遅れて引かれるようにする
+    bars.forEach((bar, i) => {
+      setTimeout(() => {
+        bar.style.width = bar.dataset.targetWidth;
+      }, i * 180);
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playUnderline();
+            observer.unobserve(phrase); // 一度引いたら以後は再アニメーションしない
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    io.observe(phrase);
+  } else {
+    // IntersectionObserver未対応の古いブラウザ向けフォールバック
+    playUnderline();
+  }
 })();

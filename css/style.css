@@ -207,7 +207,28 @@ a{color:inherit;text-decoration:none;}
   80%{transform:translateY(-2px) rotate(-1deg);}
   100%{transform:translateY(0) rotate(0);}
 }
-.hero .marker{color:var(--navy);}
+.hero .marker{
+  /* display:inline のままにする（inline-blockにするとgetClientRects()が
+     行ごとに分かれず、下線ギミックが折り返し行に正しく追従できなくなる） */
+  background:none; /* 通常の.markerが持つ黄色ハイライト背景は打ち消し、線を描くギミックに置き換える */
+  color:#fff;
+  font-weight:800;
+  font-size:1.18em;
+  padding:0 2px;
+  text-shadow:0 1px 10px rgba(0,0,0,0.25);
+}
+/* スクロールで見えたら、マーカーで下線を引くギミック（行ごとにJSで生成する実要素） */
+.marker-underline-line{
+  position:absolute;
+  height:6px;
+  width:0;
+  border-radius:4px;
+  background:linear-gradient(90deg, var(--accent), #ff7a59);
+  box-shadow:0 0 14px rgba(242,169,59,0.65);
+  transition:width .6s cubic-bezier(.22,.85,.28,1);
+  pointer-events:none;
+  z-index:6;
+}
 .hero p.lead{
   max-width:640px;
   font-size:16px;
