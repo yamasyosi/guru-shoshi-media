@@ -70,9 +70,18 @@
     "photo": "images/bella-notte-pescatore.jpg",
     "excerpt": "魚介の旨味が煮詰まったペスカトーレは、もはや口頭ではなく書面で交わしたい美味しさ。本格イタリアンと、司法書士の妙な視点でお届けする一夜。",
     "photos": [
-      { "url": "images/bella-notte-pescatore.jpg", "caption": "本日のメイン証人：魚介たっぷりペスカトーレ" },
-      { "url": "images/bella-notte-acquapazza.jpg", "caption": "彩り豊かなアクアパッツァ（レモン香る公正証書仕立て）" },
-      { "url": "images/bella-notte-meat.jpg", "caption": "とろける肉料理は、もはや動かぬ物的証拠" }
+      {
+        "url": "images/bella-notte-pescatore.jpg",
+        "caption": "本日のメイン証人：魚介たっぷりペスカトーレ"
+      },
+      {
+        "url": "images/bella-notte-acquapazza.jpg",
+        "caption": "彩り豊かなアクアパッツァ（レモン香る公正証書仕立て）"
+      },
+      {
+        "url": "images/bella-notte-meat.jpg",
+        "caption": "とろける肉料理は、もはや動かぬ物的証拠"
+      }
     ],
     "review": [
       "司法書士の仕事において「実印」は絶対的な信頼の証だ。契約書に実印が押された瞬間、そこに書かれた約束は動かぬものになる。新大久保の「BELLA NOTTE（ベラノッテ）」で運ばれてきたペスカトーレを一口食べた瞬間、私は確信した。これは実印級の一皿だ、と。",
@@ -96,10 +105,22 @@
     "photo": "images/sanada-tempura.jpg",
     "excerpt": "コシの強い蕎麦、みずみずしいズッキーニの天ぷら——そして、大好きな舞茸天を善意で手放してしまった男の、静かなる後悔の記録。",
     "photos": [
-      { "url": "images/sanada-tempura.jpg", "caption": "野菜天ぷら（ズッキーニ・かぼちゃ・舞茸・エノキ）" },
-      { "url": "images/sanada-soba.jpg", "caption": "しっかりコシのある大盛り蕎麦" },
-      { "url": "images/sanada-tamagoyaki.jpg", "caption": "だし巻き玉子（大根おろし添え）" },
-      { "url": "images/sanada-tofu.jpg", "caption": "豆腐の小鉢。添えられた豆が絶品" }
+      {
+        "url": "images/sanada-tempura.jpg",
+        "caption": "野菜天ぷら（ズッキーニ・かぼちゃ・舞茸・エノキ）"
+      },
+      {
+        "url": "images/sanada-soba.jpg",
+        "caption": "しっかりコシのある大盛り蕎麦"
+      },
+      {
+        "url": "images/sanada-tamagoyaki.jpg",
+        "caption": "だし巻き玉子（大根おろし添え）"
+      },
+      {
+        "url": "images/sanada-tofu.jpg",
+        "caption": "豆腐の小鉢。添えられた豆が絶品"
+      }
     ],
     "review": [
       "司法書士の仕事には「所有権移転登記」という手続きがある。売買、贈与、相続——理由はどうあれ、ある財産の権利が一方から他方へと移る瞬間を、書面で厳格に証明する仕事だ。銀座シックスの地下、そば処「真田」のカウンターで、私はまさかこの手続きを、たった一枚の舞茸天ぷらを巡って、自らの意思で実行してしまうことになる。",
@@ -125,10 +146,22 @@
     "photo": "images/sakushuan-tempura.jpg",
     "excerpt": "銀座「真田」で手放した舞茸天のリベンジを誓って挑んだ神楽坂の隠れ家蕎麦屋。しかし今回もまた、舞茸天への請求権は時効未成立のまま持ち越しとなった。",
     "photos": [
-      { "url": "images/sakushuan-tempura.jpg", "caption": "蕎麦と天ぷら盛り合わせ（残念ながら舞茸天は不在）" },
-      { "url": "images/sakushuan-soba.jpg", "caption": "ぬめりのある喉越しが特徴の蕎麦" },
-      { "url": "images/sakushuan-tofu.jpg", "caption": "揚げ出し豆腐（なめこ入り）" },
-      { "url": "images/sakushuan-storefront.jpg", "caption": "神楽坂の路地裏にひっそりと佇む店構え" }
+      {
+        "url": "images/sakushuan-tempura.jpg",
+        "caption": "蕎麦と天ぷら盛り合わせ（残念ながら舞茸天は不在）"
+      },
+      {
+        "url": "images/sakushuan-soba.jpg",
+        "caption": "ぬめりのある喉越しが特徴の蕎麦"
+      },
+      {
+        "url": "images/sakushuan-tofu.jpg",
+        "caption": "揚げ出し豆腐（なめこ入り）"
+      },
+      {
+        "url": "images/sakushuan-storefront.jpg",
+        "caption": "神楽坂の路地裏にひっそりと佇む店構え"
+      }
     ],
     "review": [
       "前回、銀座「真田」で舞茸天への所有権を善意により手放してしまった私は、心のどこかでずっと「時効取得」ならぬ「リベンジ取得」の機会をうかがっていた。舞茸天への請求権は、まだ時効になっていないはずだ——そんな謎の確信を胸に、神楽坂の路地裏にひっそり佇む「作州庵」の暖簾をくぐった。",
@@ -154,11 +187,26 @@
     "photo": "images/bulgari-teastand.jpg",
     "excerpt": "「司法書士ごときが入っていいのか…？」金色に輝くロゴの前で怯みながら踏み込んだ、アフタヌーンティーという名の異世界。会計を見て震え、簡易裁判所の訴額を思い出して強がった記録。",
     "photos": [
-      { "url": "images/bulgari-sign.jpg", "caption": "入店前から圧を放つ、黄金のロゴサイン" },
-      { "url": "images/bulgari-lobby.jpg", "caption": "物音ひとつしない、静謐すぎるアプローチ" },
-      { "url": "images/bulgari-teastand.jpg", "caption": "銀色に輝く三段のアフタヌーンティースタンド" },
-      { "url": "images/bulgari-cake.jpg", "caption": "芸術品のような一皿。もはや登記済証レベルの完成度" },
-      { "url": "images/bulgari-drinks.jpg", "caption": "1杯3,000〜5,000円級のフリーフロードリンク" }
+      {
+        "url": "images/bulgari-sign.jpg",
+        "caption": "入店前から圧を放つ、黄金のロゴサイン"
+      },
+      {
+        "url": "images/bulgari-lobby.jpg",
+        "caption": "物音ひとつしない、静謐すぎるアプローチ"
+      },
+      {
+        "url": "images/bulgari-teastand.jpg",
+        "caption": "銀色に輝く三段のアフタヌーンティースタンド"
+      },
+      {
+        "url": "images/bulgari-cake.jpg",
+        "caption": "芸術品のような一皿。もはや登記済証レベルの完成度"
+      },
+      {
+        "url": "images/bulgari-drinks.jpg",
+        "caption": "1杯3,000〜5,000円級のフリーフロードリンク"
+      }
     ],
     "review": [
       "司法書士の日常業務は、正直に言えば地味だ。登記申請書と向き合い、添付書類の不備を1件1件つぶし、法務局の窓口担当者と粛々とやり取りする。そんな日々を送る男が、ある日「ブルガリ ホテル 東京」の黒い石壁に金色で輝く「BVLGARI」のロゴサインの前に立った。正直に告白する。入店前、心の中で静かにこう呟いていた。「司法書士ごときが、ここに入っていいのか……？」",
@@ -183,11 +231,26 @@
     "photo": "images/mizunara-macallan.jpg",
     "excerpt": "バー初心書士、まさかの単独審理。まずは安全資産マッカラン12年で保全処分。最後は裏メニューという名の予備的請求に怯えるも、マスターの職権補正に救われた一夜の記録。",
     "photos": [
-      { "url": "images/mizunara-macallan.jpg", "caption": "まずは安全資産、マッカラン12年 ダブルカスク" },
-      { "url": "images/mizunara-oldpulteney.jpg", "caption": "コスパ重視で選んだオールドプルトニー" },
-      { "url": "images/mizunara-dewars.jpg", "caption": "マスターが職権補正で提案してくれたデュワーズ12年（日本限定・水楢樽）" },
-      { "url": "images/mizunara-glass.jpg", "caption": "グラスの中で揺れる琥珀色の判決文" },
-      { "url": "images/mizunara-counter.jpg", "caption": "静かな緊張感が漂うカウンター席" }
+      {
+        "url": "images/mizunara-macallan.jpg",
+        "caption": "まずは安全資産、マッカラン12年 ダブルカスク"
+      },
+      {
+        "url": "images/mizunara-oldpulteney.jpg",
+        "caption": "コスパ重視で選んだオールドプルトニー"
+      },
+      {
+        "url": "images/mizunara-dewars.jpg",
+        "caption": "マスターが職権補正で提案してくれたデュワーズ12年（日本限定・水楢樽）"
+      },
+      {
+        "url": "images/mizunara-glass.jpg",
+        "caption": "グラスの中で揺れる琥珀色の判決文"
+      },
+      {
+        "url": "images/mizunara-counter.jpg",
+        "caption": "静かな緊張感が漂うカウンター席"
+      }
     ],
     "review": [
       "司法書士という仕事柄、書類の不備には人一倍敏感だ。しかしこの日、神楽坂のバー「MIZUNARA IN TOKYO」のドアを開けた瞬間、私が直面したのは書類ではなく、自分自身の“バー実務経験の不備”だった。完全なる初心書士、いや初心者。チャージ料や高額請求への恐怖心は、さながら見知らぬ相手方から届いた督促状を開封する瞬間の緊張感である。",
@@ -213,11 +276,26 @@
     "photo": "images/takahashi-bowl.jpg",
     "excerpt": "手軽に安く済ませるつもりが、店名の『髙（はしごだか）』を見た瞬間に戸籍実務モードが発動。焼きあごの旨味に感動しつつ、味玉をさらりと追加した同行者の先見の明に脱帽した一夜。",
     "photos": [
-      { "url": "images/takahashi-sign.jpg", "caption": "夜の歌舞伎町に光る「たかはし」の看板" },
-      { "url": "images/takahashi-logo.jpg", "caption": "公式ロゴにも堂々と刻まれた「髙橋」の文字。はしごだか確定の瞬間" },
-      { "url": "images/takahashi-bowl.jpg", "caption": "焼きあご塩らーめん。澄んだスープが美しい" },
-      { "url": "images/takahashi-chopsticks.jpg", "caption": "レンゲ片手に、スープをグイグイ飲み進める" },
-      { "url": "images/takahashi-table.jpg", "caption": "味玉（煮卵）がさりげなく乗った、もう一つの丼" }
+      {
+        "url": "images/takahashi-sign.jpg",
+        "caption": "夜の歌舞伎町に光る「たかはし」の看板"
+      },
+      {
+        "url": "images/takahashi-logo.jpg",
+        "caption": "公式ロゴにも堂々と刻まれた「髙橋」の文字。はしごだか確定の瞬間"
+      },
+      {
+        "url": "images/takahashi-bowl.jpg",
+        "caption": "焼きあご塩らーめん。澄んだスープが美しい"
+      },
+      {
+        "url": "images/takahashi-chopsticks.jpg",
+        "caption": "レンゲ片手に、スープをグイグイ飲み進める"
+      },
+      {
+        "url": "images/takahashi-table.jpg",
+        "caption": "味玉（煮卵）がさりげなく乗った、もう一つの丼"
+      }
     ],
     "review": [
       "今日は経費も時間も抑えて、サクッと済ませる「簡易迅速手続き」でいこう——そう決めて入った歌舞伎町で目に飛び込んできたのが「たかはし」の看板だった。ただし引っかかったのは味ではなく、文字だった。「髙橋」の「髙」、いわゆる“はしごだか”。知り合いに同じ表記を使う人がいるものだから、戸籍謄本の氏名照合をするときのような妙な親近感が湧き、吸い込まれるように暖簾をくぐってしまった。安く手早く、のはずが、入店動機はすでに文字照合実務レベルである。",
@@ -242,10 +320,22 @@
     "photo": "images/kurazushi-plates2.jpg",
     "excerpt": "軍艦ばかり注文する私的自治、正体不明の『竹屋2』、そして全メニュー完食の可能性——御徒町のくら寿司で発生した3つの法的論点に、本気の判決を下す。",
     "photos": [
-      { "url": "images/kurazushi-storefront.jpg", "caption": "被告物件「TAKEYA2」。くら寿司はこのビルの中に所在する" },
-      { "url": "images/kurazushi-takeya2.jpg", "caption": "主要証拠：黒地に白抜きで光る「TAKEYA2」の袖看板" },
-      { "url": "images/kurazushi-plates1.jpg", "caption": "証拠物件その2：軍艦巻きの連射注文" },
-      { "url": "images/kurazushi-plates2.jpg", "caption": "証拠物件その3：さらに増殖する軍艦・にぎり群" }
+      {
+        "url": "images/kurazushi-storefront.jpg",
+        "caption": "被告物件「TAKEYA2」。くら寿司はこのビルの中に所在する"
+      },
+      {
+        "url": "images/kurazushi-takeya2.jpg",
+        "caption": "主要証拠：黒地に白抜きで光る「TAKEYA2」の袖看板"
+      },
+      {
+        "url": "images/kurazushi-plates1.jpg",
+        "caption": "証拠物件その2：軍艦巻きの連射注文"
+      },
+      {
+        "url": "images/kurazushi-plates2.jpg",
+        "caption": "証拠物件その3：さらに増殖する軍艦・にぎり群"
+      }
     ],
     "review": [
       "【事件の概要と法的主題】　2026年7月31日、私は御徒町に佇む「くら寿司 御徒町店」へ足を踏み入れた。回転寿司チェーンという極めて日常的な業態であるにもかかわらず、この日の食事には少なからぬ法的疑義が発生した。争点は大きく3つ。すなわち、①注文内容に見る“軍艦専有権と意思表示の錯誤問題”、②物件名「竹屋2」を巡る不動産登記的・行政手続き上の謎、③全メニュー即時履行（完食）の実現可能性、である。以下、順に検討する。",
@@ -272,11 +362,26 @@
     "photo": "images/jinghua-xiaolongbao.jpg",
     "excerpt": "誕生日にご馳走になった銀座の隠れ家中華。フカヒレ小籠包の肉汁は独り占めしたくなる美味さ、そして運営元「株式会社スリーボンド」を巡る、まさかの豆知識コラム。",
     "photos": [
-      { "url": "images/jinghua-logo.jpg", "caption": "箸袋にも刻まれた「京華小吃」の屋号" },
-      { "url": "images/jinghua-xiaolongbao.jpg", "caption": "小籠包（手前）とフカヒレ小籠包（奥）、二段構えの証人尋問" },
-      { "url": "images/jinghua-yakisoba.jpg", "caption": "定番・五目あんかけ焼きそば。具材の物証多数" },
-      { "url": "images/jinghua-salad.jpg", "caption": "ジンホアサラダ。前菜としての手続きも抜かりなし" },
-      { "url": "images/jinghua-receipt.jpg", "caption": "証拠物件その1：合計9,850円也のレシート" }
+      {
+        "url": "images/jinghua-logo.jpg",
+        "caption": "箸袋にも刻まれた「京華小吃」の屋号"
+      },
+      {
+        "url": "images/jinghua-xiaolongbao.jpg",
+        "caption": "小籠包（手前）とフカヒレ小籠包（奥）、二段構えの証人尋問"
+      },
+      {
+        "url": "images/jinghua-yakisoba.jpg",
+        "caption": "定番・五目あんかけ焼きそば。具材の物証多数"
+      },
+      {
+        "url": "images/jinghua-salad.jpg",
+        "caption": "ジンホアサラダ。前菜としての手続きも抜かりなし"
+      },
+      {
+        "url": "images/jinghua-receipt.jpg",
+        "caption": "証拠物件その1：合計9,850円也のレシート"
+      }
     ],
     "review": [
       "誕生日を祝ってもらう形で訪れたのが、銀座の路地裏にひっそりと佇む中華の名店「京華小吃（ジンホア）」だった。恥ずかしながら、Googleマップの案内なしにはたどり着けない、完全な隠れ家立地。司法書士的に言えば、住所という“表題部”は存在するのに、現地の“表示登記”がなかなか見つからない物件、といったところである。",
@@ -301,11 +406,26 @@
     "photo": "images/xex-melon.jpg",
     "excerpt": "愛宕グリーンヒルズ42階、東京タワーを見下ろす絶景でメロン食べ放題。搾りたて和栗モンブランと神対応のホスピタリティに、感謝の意を即時履行するしかなかった一夜。",
     "photos": [
-      { "url": "images/xex-melon.jpg", "caption": "二段の白磁スタンドに積まれた、メロン食べ放題の証拠物件" },
-      { "url": "images/xex-montblanc.jpg", "caption": "目の前で搾り出される、和栗モンブランの“決定書”" },
-      { "url": "images/xex-table1.jpg", "caption": "イタリアンビュッフェの陳述書一式" },
-      { "url": "images/xex-tokyotower.jpg", "caption": "42階の窓から見下ろす、東京タワーという名の管轄区域" },
-      { "url": "images/xex-table2.jpg", "caption": "絶景窓際席で繰り広げられた、第二ラウンドの証拠品たち" }
+      {
+        "url": "images/xex-melon.jpg",
+        "caption": "二段の白磁スタンドに積まれた、メロン食べ放題の証拠物件"
+      },
+      {
+        "url": "images/xex-montblanc.jpg",
+        "caption": "目の前で搾り出される、和栗モンブランの“決定書”"
+      },
+      {
+        "url": "images/xex-table1.jpg",
+        "caption": "イタリアンビュッフェの陳述書一式"
+      },
+      {
+        "url": "images/xex-tokyotower.jpg",
+        "caption": "42階の窓から見下ろす、東京タワーという名の管轄区域"
+      },
+      {
+        "url": "images/xex-table2.jpg",
+        "caption": "絶景窓際席で繰り広げられた、第二ラウンドの証拠品たち"
+      }
     ],
     "review": [
       "愛宕グリーンヒルズのエントランスをくぐった瞬間、まず出迎えてくれたのは、思いのほか堅固なビルセキュリティだった。この物々しさ、まるで登記所の窓口で本人確認書類一式を提出する瞬間の、あの独特の緊張感によく似ている。もっとも今回審尋を受けるのは私の本人確認ではなく、この後訪れる胃袋のキャパシティの方だったのだが。",
@@ -330,11 +450,26 @@
     "photo": "images/sorano-asparagus.jpg",
     "excerpt": "仕事終わりの開放感で飛び込んだ豆腐料理の店。主役のはずの豆腐を差し置いて、アスパラガスが10本連続注文されるという、まさかの下剋上が発生した夜。",
     "photos": [
-      { "url": "images/sorano-noren.jpg", "caption": "路地の奥にひっそりと灯る「空野」の暖簾" },
-      { "url": "images/sorano-tofupot.jpg", "caption": "その場で火にかける、切り分けていない出来立て豆腐セット" },
-      { "url": "images/sorano-yuba.jpg", "caption": "湯葉刺し。すだち一切れが上品さを底上げする" },
-      { "url": "images/sorano-asparagus.jpg", "caption": "この日一番の主役、アスパラガス" },
-      { "url": "images/sorano-table.jpg", "caption": "気づけばテーブルは天ぷらと湯葉刺しで占拠されていた" }
+      {
+        "url": "images/sorano-noren.jpg",
+        "caption": "路地の奥にひっそりと灯る「空野」の暖簾"
+      },
+      {
+        "url": "images/sorano-tofupot.jpg",
+        "caption": "その場で火にかける、切り分けていない出来立て豆腐セット"
+      },
+      {
+        "url": "images/sorano-yuba.jpg",
+        "caption": "湯葉刺し。すだち一切れが上品さを底上げする"
+      },
+      {
+        "url": "images/sorano-asparagus.jpg",
+        "caption": "この日一番の主役、アスパラガス"
+      },
+      {
+        "url": "images/sorano-table.jpg",
+        "caption": "気づけばテーブルは天ぷらと湯葉刺しで占拠されていた"
+      }
     ],
     "review": [
       "仕事終わり、書類の山からようやく解放された足で向かったのが、渋谷の路地裏にひっそりと暖簾を掲げる「豆腐料理 空野」。看板には確かに「豆腐料理」と書いてある。この表示を信じて入店したのだが、結論から言うと、この日の主役は最後まで豆腐にはならなかった。",
@@ -359,10 +494,22 @@
     "photo": "images/hatsuhana-soba2.jpg",
     "excerpt": "自然薯そばの深い甘みに感動する裏で、駐車場で発生した「置き去り事件」。財布もスマホも車内に残されたグル書士が下した、まさかの即決判断とは。",
     "photos": [
-      { "url": "images/hatsuhana-sign.jpg", "caption": "箱根の路傍にひっそりと立つ「初花 もみじ」の案内板" },
-      { "url": "images/hatsuhana-soba1.jpg", "caption": "せいろに山と盛られた、名物・自然薯そば" },
-      { "url": "images/hatsuhana-soba2.jpg", "caption": "海苔をまとった蕎麦と、とろみの効いたつゆ" },
-      { "url": "images/hatsuhana-window.jpg", "caption": "窓辺に並んだ二人分のせいろ。箱根の景色をおかずに" }
+      {
+        "url": "images/hatsuhana-sign.jpg",
+        "caption": "箱根の路傍にひっそりと立つ「初花 もみじ」の案内板"
+      },
+      {
+        "url": "images/hatsuhana-soba1.jpg",
+        "caption": "せいろに山と盛られた、名物・自然薯そば"
+      },
+      {
+        "url": "images/hatsuhana-soba2.jpg",
+        "caption": "海苔をまとった蕎麦と、とろみの効いたつゆ"
+      },
+      {
+        "url": "images/hatsuhana-window.jpg",
+        "caption": "窓辺に並んだ二人分のせいろ。箱根の景色をおかずに"
+      }
     ],
     "review": [
       "仕事終わりの解放感そのままに、箱根まで足を延ばして訪れたのが、自然薯そばで名高い「はつ花そば 本店」。大人気店だけあって店内は大混雑だったが、回転率が驚くほど早く、待ち時間もほどほどに2階席へ案内してもらえた。この“審理のスピード”だけでも、すでに好印象である。",
@@ -386,10 +533,22 @@
     "photo": "images/koyasudo-set.jpg",
     "excerpt": "東京から車で1時間半、田んぼの真ん中の秘境古民家で出会った「ぬめり系蕎麦」。そして油断した隙に、湯葉の最後の1枚が不法占有された事件の記録。",
     "photos": [
-      { "url": "images/koyasudo-sign.jpg", "caption": "田んぼの脇にひっそりと掲げられた「小休止のうか」の看板" },
-      { "url": "images/koyasudo-interior.jpg", "caption": "江戸時代を思わせる、味わい深い古民家の座敷" },
-      { "url": "images/koyasudo-set.jpg", "caption": "日光の水で仕込んだ手打ち蕎麦の御膳" },
-      { "url": "images/koyasudo-emptyplate.jpg", "caption": "証拠品：湯葉だけが忽然と消えた、大根のツマだけが残る現場写真" }
+      {
+        "url": "images/koyasudo-sign.jpg",
+        "caption": "田んぼの脇にひっそりと掲げられた「小休止のうか」の看板"
+      },
+      {
+        "url": "images/koyasudo-interior.jpg",
+        "caption": "江戸時代を思わせる、味わい深い古民家の座敷"
+      },
+      {
+        "url": "images/koyasudo-set.jpg",
+        "caption": "日光の水で仕込んだ手打ち蕎麦の御膳"
+      },
+      {
+        "url": "images/koyasudo-emptyplate.jpg",
+        "caption": "証拠品：湯葉だけが忽然と消えた、大根のツマだけが残る現場写真"
+      }
     ],
     "review": [
       "仕事終わりの解放感を引きずったまま、東京から車を1時間半走らせて向かったのが、栃木の田んぼの真ん中にぽつんと佇む「小休止のうか」。カーナビが本当にこの先に店があるのか疑いたくなるほどの辺鄙な立地で、看板を見つけたときの安堵感は、迷子案件が無事解決した瞬間の気分に近かった。",
@@ -414,10 +573,22 @@
     "photo": "images/noran-samgyeopsal.jpg",
     "excerpt": "誕生日祝いに訪れた恵比寿39階の夜景レストラン。トッポギもサムギョプサルも完璧だったが、「ビビン麺」というポップな表記に完全に油断し、激辛の不意打ちを食らった夜。",
     "photos": [
-      { "url": "images/noran-drinks.jpg", "caption": "夜景を背にした赤ワインとオレンジ系ドリンク" },
-      { "url": "images/noran-samgyeopsal.jpg", "caption": "連れの分まで贅沢に完食したサムギョプサル" },
-      { "url": "images/noran-tteokbokki.jpg", "caption": "トマトとえごまのトッポギ。酸味とコクの絶妙な合意" },
-      { "url": "images/noran-bibimmyeon.jpg", "caption": "見た目は可愛いのに、中身は激辛だったビビン麺" }
+      {
+        "url": "images/noran-drinks.jpg",
+        "caption": "夜景を背にした赤ワインとオレンジ系ドリンク"
+      },
+      {
+        "url": "images/noran-samgyeopsal.jpg",
+        "caption": "連れの分まで贅沢に完食したサムギョプサル"
+      },
+      {
+        "url": "images/noran-tteokbokki.jpg",
+        "caption": "トマトとえごまのトッポギ。酸味とコクの絶妙な合意"
+      },
+      {
+        "url": "images/noran-bibimmyeon.jpg",
+        "caption": "見た目は可愛いのに、中身は激辛だったビビン麺"
+      }
     ],
     "review": [
       "誕生日を祝ってもらう形で訪れたのが、恵比寿ガーデンプレイスの高層階に構える「NORAN（ノーラン）」。窓の外にはパシフィコ横浜やランドマークタワーまで一望できる、ちょっと反則級のロケーション。しかもこの日は横浜スタジアム方面がやけにキラキラ輝いていて、後で調べたらMrs. GREEN APPLEのライブ演出だったと判明した。まさかの“無関係な第三者の好演出”まで景色に含まれてくるとは、想定外の付加価値である。",
@@ -441,10 +612,22 @@
     "photo": "images/kawakamian-soba.jpg",
     "excerpt": "蕎麦を味わうつもりで新幹線に飛び乗ったのに、バルサミコ風味の野菜グリル一口で主役の座があっさり入れ替わった軽井沢本店訪問記。",
     "photos": [
-      { "url": "images/kawakamian-exterior.jpg", "caption": "紅葉に彩られた、モダンな店構え" },
-      { "url": "images/kawakamian-noren.jpg", "caption": "「そば・美酒・料理」と書かれた暖簾がお出迎え" },
-      { "url": "images/kawakamian-soba.jpg", "caption": "硬めでコシの強い、名物の手打ち蕎麦" },
-      { "url": "images/kawakamian-vegetables.jpg", "caption": "この日の影のMVP、バルサミコ風味の野菜グリル" }
+      {
+        "url": "images/kawakamian-exterior.jpg",
+        "caption": "紅葉に彩られた、モダンな店構え"
+      },
+      {
+        "url": "images/kawakamian-noren.jpg",
+        "caption": "「そば・美酒・料理」と書かれた暖簾がお出迎え"
+      },
+      {
+        "url": "images/kawakamian-soba.jpg",
+        "caption": "硬めでコシの強い、名物の手打ち蕎麦"
+      },
+      {
+        "url": "images/kawakamian-vegetables.jpg",
+        "caption": "この日の影のMVP、バルサミコ風味の野菜グリル"
+      }
     ],
     "review": [
       "表参道や麻布十番にも店を構える格式高い名店「川上庵」。その本店を目指し、仕事終わりの解放感そのままに新幹線へ飛び乗り、軽井沢まで突撃してきた。駅の北口から旧軽井沢方面へ、色づいた紅葉を眺めながらの散策は、それだけで十分な“主張”となる贅沢な前菜だった。",
@@ -468,10 +651,22 @@
     "photo": "images/sanoya-ramen.jpg",
     "excerpt": "アウトレット近くで夜遅くまで営業する一軒に駆け込んだら、まさかの貸し切り状態。一口すすれば「喜多方ラーメンかよ！」とツッコみたくなる馴染みの味に、次の予定への焦りが入り混じった一夜。",
     "photos": [
-      { "url": "images/sanoya-parking.jpg", "caption": "夜の駐車場に光る、黄色い看板が目印" },
-      { "url": "images/sanoya-storefront.jpg", "caption": "営業中の赤い幟がはためく、味わい深い店構え" },
-      { "url": "images/sanoya-signboard.jpg", "caption": "「We Love SANO」の文字が誇らしい大看板" },
-      { "url": "images/sanoya-ramen.jpg", "caption": "半熟味玉が主張する、佐野ラーメンの一杯" }
+      {
+        "url": "images/sanoya-parking.jpg",
+        "caption": "夜の駐車場に光る、黄色い看板が目印"
+      },
+      {
+        "url": "images/sanoya-storefront.jpg",
+        "caption": "営業中の赤い幟がはためく、味わい深い店構え"
+      },
+      {
+        "url": "images/sanoya-signboard.jpg",
+        "caption": "「We Love SANO」の文字が誇らしい大看板"
+      },
+      {
+        "url": "images/sanoya-ramen.jpg",
+        "caption": "半熟味玉が主張する、佐野ラーメンの一杯"
+      }
     ],
     "review": [
       "仕事終わりの解放感を引きずったまま、アウトレット近くで夜遅くまで営業している「手打ち佐野ラーメン 佐野屋」へ駆け込んだ。ガラガラと重い引き戸を開けると、店内はまさかの貸し切り状態。「大丈夫か、この店……」と一瞬だけ不安が頭をよぎったのは、正直に告白しておく。",
@@ -483,5 +678,45 @@
     ],
     "mapQuery": "栃木県佐野市 手打ち佐野ラーメン 佐野屋",
     "officialUrl": "https://www.instagram.com/sanoya_sanoramen/"
+  },
+  {
+    "slug": "chanoma-yokohama",
+    "title": "「スネトラン、ただいま。」横浜«chanoma»で成立した、絶品ローストビーフの«即決»和解。",
+    "shopName": "chano-ma 横浜（チャノマ横浜）",
+    "area": "神奈川県・横浜",
+    "prefecture": "神奈川県",
+    "ward": "横浜市中区",
+    "visitDate": "2025-07-11",
+    "photo": "images/chanoma-roastbeef-fries.jpg",
+    "excerpt": "1年以上前、事前予約を守らなかった連れとの大喧嘩から«スネトラン»と命名されたこの店に、ついにリベンジ入店。絶品ローストビーフの前では、積年の冷戦もあっさり«即決»和解となった一夜。",
+    "photos": [
+      {
+        "url": "images/chanoma-night-exterior.jpg",
+        "caption": "夜の横浜赤レンガ倉庫、カーナビだけが頼りの静かな到着"
+      },
+      {
+        "url": "images/chanoma-drinks.jpg",
+        "caption": "祝杯代わりの一杯と、フルーツたっぷりのモクテル"
+      },
+      {
+        "url": "images/chanoma-roastbeef-fries.jpg",
+        "caption": "奥に鎮座する主役のローストビーフと、手前のガーリックポテト"
+      },
+      {
+        "url": "images/chanoma-sorbet.jpg",
+        "caption": "爽やかな柑橘シャーベットで有終の美"
+      }
+    ],
+    "review": [
+      "平日は登記申請書とにらめっこ、休日になった途端に食レポで浮かれるという、我ながら忙しい生き方をしている自覚はある。この日も仕事終わりの解放感そのままに、横浜赤レンガ倉庫へ車を走らせた。ナビの画面だけが頼りの夜道の先、ライトアップされたレンガ倉庫が見えてきた瞬間、助手席の連れと思わず顔を見合わせた。「ついに来たね、あの店に」と。",
+      "その店の名は、chano-ma 横浜。ただし私たちの間では、長らく«スネトラン»という別名で呼ばれていた。事の発端は1年以上前。事前に予約していたにもかかわらず、当日連れから届いたのは仕事終わりの「終わった、ごめんよ〜」の一言だけ。間に合わないと分かった時点で一報を入れるのは、相手を思う気持ちがあれば当然できるはずの«事前通知»のようなものだと思うのだが、それを怠られたこちらは「連絡がないからキャンセルした」と応戦し、大喧嘩に発展。以来この店は、拗ねた者勝ちの«スネトラン»として、私たちの記憶に刻まれることとなった。",
+      "あれから1年、ようやく訪れたリベンジの夜。今回は双方«債務不履行»なく、時間通りに二人揃って入店。まずは祝杯代わりの一杯と、フルーツがごろごろ沈んだ華やかなモクテルで乾杯した。氷がグラスの中でカラリと鳴る音すら、和解成立を祝う祝砲のように聞こえたのは、さすがに浮かれすぎだろうか。",
+      "そして主役の登場である。奥に控えめに、しかし堂々と鎮座するローストビーフ。一切れ口に運べば、肉の旨味がじんわりと染み出してくる仕上がりで、これはもう問答無用の«勝訴»案件。手前のガーリックポテトも負けじと存在感を放っており、カリッと揚がった衣の香ばしさとハーブの香りで、ローストビーフとの«同時履行»関係——どちらが欠けても成立しない、見事な主菜・副菜のバランスを築いていた。",
+      "実はこの日、連れは訪問前の約10日間、ほとんどまともな食事が喉を通らないほど元気がなかったらしい。「大丈夫か」と本気で心配していたのだが、chano-maのローストビーフを前にした途端、見違えるようにフォークが進みだした。積年の«スネトラン»が、まさかの食欲回復の«立証»まで果たすとは、こちらとしても嬉しい誤算である。",
+      "締めくくりは、柑橘のシャーベットに青いジュレを忍ばせた涼やかなパルフェ。レモンの爽やかな酸味が、ここまでの肉と揚げ物の余韻をすっと«清算»してくれる、見事な閉廷——もとい、有終の美だった。",
+      "総評：事前の報連相を怠った連れとの冷戦状態（スネトラン事件）も、絶品ローストビーフの前では即座に和解成立。連絡一本の«事前通知»は怠っても、美味しい料理への«即決»と食欲回復の効果は絶大でした。スネトラン、ありがとう！次回はちゃんと1年も空けずに来ます。"
+    ],
+    "mapQuery": "神奈川県横浜市中区新港1-1-2 横浜赤レンガ倉庫2号館 chano-ma 横浜",
+    "officialUrl": "https://www.dd-holdings.jp/shops/chanoma/yokohama#/"
   }
 ]
