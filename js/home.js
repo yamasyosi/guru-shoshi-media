@@ -262,3 +262,27 @@
     playUnderline();
   }
 })();
+
+/* ---- ギャップ萌えカード：表（本業）と裏（食レポ）を1枚のカードで切り替えるフリップギミック ---- */
+(function () {
+  const card = document.getElementById("gapFlipCard");
+  if (!card) return;
+
+  function setFlipped(flipped) {
+    card.classList.toggle("is-flipped", flipped);
+    card.setAttribute("aria-pressed", String(flipped));
+  }
+
+  // タップ／クリックでトグル（PCはCSSのhoverでも切り替わるが、タップ操作にも対応させる）
+  card.addEventListener("click", () => {
+    setFlipped(!card.classList.contains("is-flipped"));
+  });
+
+  // キーボード操作（Enter / Space）にも対応
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setFlipped(!card.classList.contains("is-flipped"));
+    }
+  });
+})();
