@@ -297,3 +297,28 @@
     }
   });
 })();
+
+/* ---- マスコットキャラクター「りんたろう」：スクロールするとわんわん鳴くギミック ---- */
+(function () {
+  const mascot = document.getElementById("rintaroMascot");
+  if (!mascot) return;
+
+  const THROTTLE_MS = 900;
+  let lastBark = 0;
+  let hideTimer = null;
+
+  function bark() {
+    const now = Date.now();
+    if (now - lastBark < THROTTLE_MS) return;
+    lastBark = now;
+
+    mascot.classList.remove("bark-play");
+    void mascot.offsetWidth; // reflowさせてアニメーションを再始動
+    mascot.classList.add("bark-play");
+
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => mascot.classList.remove("bark-play"), 1100);
+  }
+
+  window.addEventListener("scroll", bark, { passive: true });
+})();
