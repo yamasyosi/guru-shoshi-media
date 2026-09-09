@@ -102,20 +102,18 @@ a{color:inherit;text-decoration:none;}
   background-size:cover;
   background-position:center 30%;
   background-repeat:no-repeat;
-  /* 元写真の青みを抑えつつ、明るく美味しそうな色味に補正 */
-  filter:brightness(1.25) saturate(1.08) sepia(0.4) hue-rotate(-16deg) contrast(1.02);
 }
 @supports (background-image: image-set(url("../images/hero-bg.webp") 1x)){
   .hero-photo{
     background-image:image-set(url("../images/hero-bg.webp") 1x);
   }
 }
-/* ごく薄いビネットのみ。写真を暗くしすぎないよう、四隅の締まりだけ軽く調整 */
+/* ごく薄いビネットのみ。写真の色味・青みは足さず、四隅の締まりだけ調整 */
 .hero::after{
   content:"";position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.16) 0%, transparent 22%, transparent 70%, rgba(0,0,0,0.22) 100%),
-    linear-gradient(90deg, rgba(0,0,0,0.16) 0%, transparent 45%);
+    linear-gradient(180deg, rgba(0,0,0,0.30) 0%, transparent 22%, transparent 70%, rgba(0,0,0,0.35) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.28) 0%, transparent 45%);
   pointer-events:none;
 }
 .hero::before{
