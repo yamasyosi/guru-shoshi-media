@@ -266,6 +266,7 @@
 /* ---- ギャップ萌えカード：表（本業）と裏（食レポ）を1枚のカードで切り替えるフリップギミック ---- */
 (function () {
   const card = document.getElementById("gapFlipCard");
+  const tapHint = document.getElementById("gapTapHint");
   if (!card) return;
 
   function setFlipped(flipped) {
@@ -273,16 +274,26 @@
     card.setAttribute("aria-pressed", String(flipped));
   }
 
+  // 一度でも触れてもらえたら、目立たせるための「タップしてください」吹き出しは役目を終えて消える
+  function dismissTapHint() {
+    if (tapHint) tapHint.classList.add("is-hidden");
+  }
+
   // タップ／クリックでトグル（PCはCSSのhoverでも切り替わるが、タップ操作にも対応させる）
   card.addEventListener("click", () => {
     setFlipped(!card.classList.contains("is-flipped"));
+    dismissTapHint();
   });
+
+  // PCでのホバー発見時も、吹き出しの役目は終わったとみなす
+  card.addEventListener("mouseenter", dismissTapHint);
 
   // キーボード操作（Enter / Space）にも対応
   card.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       setFlipped(!card.classList.contains("is-flipped"));
+      dismissTapHint();
     }
   });
 })();
