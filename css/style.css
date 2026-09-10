@@ -1142,16 +1142,19 @@ a{color:inherit;text-decoration:none;}
 }
 .rintaro-bark{
   position:absolute;
-  left:50%;bottom:100%;
+  left:-6px;bottom:100%;
   margin-bottom:8px;
-  transform:translateX(-50%) translateY(8px) scale(.7);
+  width:max-content;
+  max-width:150px;
+  transform:translateY(8px) scale(.7);
+  transform-origin:bottom left;
   background:#fff;
   color:var(--navy);
-  font-weight:900;font-size:13px;
-  padding:6px 12px;
+  font-weight:900;font-size:12.5px;line-height:1.5;
+  padding:8px 12px;
   border-radius:14px;
   border:2px solid var(--navy);
-  white-space:nowrap;
+  white-space:normal;
   opacity:0;
   transition:opacity .25s ease, transform .25s ease;
   box-shadow:0 6px 14px -4px rgba(11,42,74,0.4);
@@ -1159,8 +1162,7 @@ a{color:inherit;text-decoration:none;}
 .rintaro-bark::after{
   content:"";
   position:absolute;
-  left:50%;top:100%;
-  transform:translateX(-50%);
+  left:22px;top:100%;
   width:0;height:0;
   border-left:6px solid transparent;
   border-right:6px solid transparent;
@@ -1168,5 +1170,5 @@ a{color:inherit;text-decoration:none;}
 }
 .rintaro-mascot.bark-play .rintaro-bark{
   opacity:1;
-  transform:translateX(-50%) translateY(0) scale(1);
+  transform:translateY(0) scale(1);
 }
