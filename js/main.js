@@ -6,6 +6,7 @@
    ============================================================ */
 
 const DATA_URL = "data/reports.json";
+const SWEETS_DATA_URL = "data/sweets.json";
 
 /** reports.json を読み込み、日付の新しい順に並べて返す */
 async function loadReports() {
@@ -13,6 +14,14 @@ async function loadReports() {
   if (!res.ok) throw new Error("記事データの読み込みに失敗しました");
   const reports = await res.json();
   return reports.slice().sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
+}
+
+/** sweets.json を読み込み、日付の新しい順に並べて返す（仕様はloadReportsと同じ） */
+async function loadSweets() {
+  const res = await fetch(SWEETS_DATA_URL, { cache: "no-store" });
+  if (!res.ok) throw new Error("スイーツデータの読み込みに失敗しました");
+  const sweets = await res.json();
+  return sweets.slice().sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
 }
 
 /** "2026-08-15" -> "2026年8月15日" */

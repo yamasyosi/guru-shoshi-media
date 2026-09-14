@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MJ2TJVDV');</script>
 <!-- End Google Tag Manager -->
-<title>食レポ｜グルメ司法書士のレストランナビ</title>
-<meta name="description" content="グルメ司法書士の食レポ詳細ページ。" />
+<title>グルメ司法書士のスイーツ特設ページ｜グルメ司法書士のレストランナビ</title>
+<meta name="description" content="司法書士なのに、なぜか本気でスイーツも食レポする。グルメ司法書士が贈る、甘いもの専門の食レポコラム特設ページ。" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="グルメ司法書士" />
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
@@ -20,15 +20,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="manifest" href="manifest.json" />
 <meta name="theme-color" content="#0b2a4a" />
 
-<meta property="og:type" content="article" />
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="グルメ司法書士のレストランナビ" />
-<meta property="og:title" content="食レポ｜グルメ司法書士のレストランナビ" />
-<meta property="og:description" content="グルメ司法書士が贈る、本気の食レポコラム。" />
+<meta property="og:title" content="グルメ司法書士のスイーツ特設ページ｜グルメ司法書士のレストランナビ" />
+<meta property="og:description" content="司法書士なのに、なぜか本気でスイーツも食レポする。グルメ司法書士が贈る、甘いもの専門の食レポコラム特設ページ。" />
 <meta property="og:image" content="https://guru-shoshi-media.vercel.app/images/og-image.jpg" />
-<meta property="og:url" content="https://guru-shoshi-media.vercel.app/article.html" />
+<meta property="og:url" content="https://guru-shoshi-media.vercel.app/sweets.html" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="食レポ｜グルメ司法書士のレストランナビ" />
-<meta name="twitter:description" content="グルメ司法書士が贈る、本気の食レポコラム。" />
+<meta name="twitter:title" content="グルメ司法書士のスイーツ特設ページ｜グルメ司法書士のレストランナビ" />
+<meta name="twitter:description" content="司法書士なのに、なぜか本気でスイーツも食レポする。グルメ司法書士が贈る、甘いもの専門の食レポコラム特設ページ。" />
 <meta name="twitter:image" content="https://guru-shoshi-media.vercel.app/images/og-image.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,10 +64,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<main class="section">
-  <div class="wrap" style="max-width:820px;">
-    <div id="article-root">
-      <p class="loading">記事を読み込み中…</p>
+<section class="profile-hero">
+  <div class="wrap">
+    <div class="avatar-lg"><img src="images/gurushoshi-avatar.jpg" alt="グルメ司法書士" /></div>
+    <div>
+      <div class="role">SWEETS SPECIAL <span class="whisper">（※甘いものにも本気です）</span></div>
+      <h1>グルメ司法書士のスイーツ特設ページ</h1>
+      <p>
+        登記申請書とにらめっこする平日の合間に、脳が欲しがるのはいつも糖分。
+        <span class="marker">モンブランもパンケーキも、案件と同じくらい真剣に審査します</span>。
+        甘いもの好きのための、もうひとつの食レポコーナーです。
+      </p>
+    </div>
+  </div>
+</section>
+
+<main class="section" id="sweets-reports" style="padding-top:56px;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Latest Sweets</span>
+      <h2>グルメ司法書士のスイーツ食レポ、最新コラム</h2>
+      <p>訪れた甘味処の数だけ、本気の糖分補給があります。新しいスイーツ食レポは随時追加中です。</p>
+    </div>
+
+    <div class="area-filter" id="areaFilter" aria-label="エリアで絞り込む">
+      <div class="area-filter-head">
+        <span class="area-filter-label">📍 エリアで絞り込む</span>
+        <button type="button" class="area-filter-clear" id="areaFilterClear" hidden>✕ 絞り込み解除</button>
+      </div>
+      <div class="area-filter-row" id="areaFilterPrefectures"></div>
+      <div class="area-filter-row area-filter-row-wards" id="areaFilterWards" hidden></div>
+      <p class="area-filter-count" id="areaFilterCount"></p>
+    </div>
+
+    <div class="card-grid" id="report-grid">
+      <p class="loading">スイーツ食レポを読み込み中…</p>
+    </div>
+
+    <div class="next-nav">
+      <a href="index.html#reports" class="btn btn-outline-nav">← 食レポ一覧（お食事）を見る</a>
     </div>
   </div>
 </main>
@@ -92,6 +127,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/article.js"></script>
+<script src="js/sweets.js"></script>
 </body>
 </html>

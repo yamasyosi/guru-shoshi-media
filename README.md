@@ -9,17 +9,23 @@
 .
 ├── index.html          # トップページ（コンセプト＋食レポ一覧＋エリア絞り込み）
 ├── article.html        # 食レポ詳細ページ（?slug= で記事を出し分け）
+├── sweets.html          # スイーツ特設ページ（食レポ一覧と全く同じ仕様のスイーツ版）
+├── sweets-article.html  # スイーツ記事詳細ページ（?slug= で記事を出し分け）
 ├── profile.html         # グルメ司法書士のプロフィールページ（スクロール演出ギミック付き）
 ├── contact.html         # お問い合わせページ（レストラン相談フォーム）
 ├── css/style.css        # 全ページ共通スタイル
 ├── js/
 │   ├── main.js           # 共通ユーティリティ（データ読み込み・日付整形・フローティングバナーなど）
+│   │                       loadReports()（食レポ用）と loadSweets()（スイーツ用）を両方定義
 │   ├── home.js           # トップページのカード一覧描画＋エリア絞り込みUI＋見出しギミック
-│   ├── article.js        # 記事詳細ページの描画
+│   ├── article.js        # 食レポ詳細ページの描画
+│   ├── sweets.js         # スイーツ一覧のカード描画＋エリア絞り込みUI（home.jsと同仕様）
+│   ├── sweets-article.js # スイーツ詳細ページの描画（article.jsと同仕様）
 │   ├── profile.js        # プロフィールページのスクロール連動ギミック
 │   └── contact.js        # お問い合わせフォーム→mailto:送信の組み立て
 ├── data/
-│   └── reports.json      # ★食レポ記事データ（ここを編集して記事を追加）
+│   ├── reports.json      # ★食レポ記事データ（ここを編集して記事を追加）
+│   └── sweets.json       # ★スイーツ食レポ記事データ（reports.jsonと同じスキーマ）
 ├── sitemap.xml           # SEO用サイトマップ（記事追加のたびに更新）
 ├── robots.txt            # クローラー向け設定
 └── vercel.json           # Vercel用の設定（クリーンURLなど）
@@ -94,6 +100,19 @@
 2. 写真を `images/` に配置（サイズが大きい場合はリサイズ・圧縮を推奨）
 3. `sitemap.xml` に記事URLを追記（`<loc>` は `article.html?slug=...` 形式）
 4. GitHubにpush → Vercelが自動デプロイ
+
+### スイーツ特設ページ（`sweets.html` / `sweets-article.html`）について
+
+食レポ（`reports.json`）とは完全に独立した、もうひとつのコンテンツ系統です。仕様・機能は
+食レポと全く同じ（★評価、都道府県/市区町村での絞り込み、カードからの詳細ページ遷移など）で、
+データソースとリンク先だけが異なります。
+
+- 記事データは `data/sweets.json`（`reports.json` と全く同じスキーマ）に追記するだけでOK。
+  コード変更は不要です。
+- 一覧・絞り込みUIは `sweets.html` ＋ `js/sweets.js`、詳細ページは `sweets-article.html` ＋
+  `js/sweets-article.js`（それぞれ `home.js` / `article.js` と同仕様）。
+- 記事追加時のチェックリストも食レポと同じですが、3.の `sitemap.xml` には
+  `sweets-article.html?slug=...` 形式で追記してください。
 
 ## ローカルでの確認方法
 
