@@ -1114,14 +1114,17 @@ a{color:inherit;text-decoration:none;}
   100%{box-shadow:0 0 0 16px rgba(242,169,59,0);}
 }
 
-/* ---------- マスコットキャラクター「りんたろう」：トップページのみ ---------- */
+/* ---------- マスコットキャラクター「りんたろう」：トップページのみ（クリックでスイーツ特設ページへ） ---------- */
 .rintaro-mascot{
   position:fixed;
   left:14px;bottom:100px;
   z-index:9997;
   width:64px;height:64px;
-  pointer-events:none;
+  display:block;
+  cursor:pointer;
+  transition:transform .2s ease;
 }
+.rintaro-mascot:hover{transform:scale(1.08);}
 @media (min-width:681px){
   .rintaro-mascot{bottom:24px;width:74px;height:74px;}
 }
@@ -1145,7 +1148,7 @@ a{color:inherit;text-decoration:none;}
   left:-6px;bottom:100%;
   margin-bottom:8px;
   width:max-content;
-  max-width:150px;
+  max-width:190px;
   transform:translateY(8px) scale(.7);
   transform-origin:bottom left;
   background:#fff;
