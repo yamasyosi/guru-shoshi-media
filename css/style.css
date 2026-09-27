@@ -101,7 +101,7 @@ a{color:inherit;text-decoration:none;}
   /* 軽量なJPEGをまず指定し、対応ブラウザではより軽いWebPに差し替える */
   background-image:url("../images/hero-bg.jpg");
   background-size:cover;
-  background-position:center 30%;
+  background-position:center 62%;
   background-repeat:no-repeat;
 }
 @supports (background-image: image-set(url("../images/hero-bg.webp") 1x)){
