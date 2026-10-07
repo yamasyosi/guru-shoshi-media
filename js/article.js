@@ -76,7 +76,7 @@
       <section class="review-block">
         <div class="label">
           <span class="icon">🍴</span>
-          <span>グルメ司法書士の本気コメント</span>
+          <span>グル書士の本気コメント</span>
         </div>
         ${reviewParagraphs}
       </section>

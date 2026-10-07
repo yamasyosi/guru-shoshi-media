@@ -1,7 +1,7 @@
 {
   "name": "グル書士の本気メシ",
   "short_name": "本気メシ",
-  "description": "グルメ司法書士の食レポ",
+  "description": "グル書士の食レポ",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#0d3b73",

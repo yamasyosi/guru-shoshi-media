@@ -17,11 +17,11 @@
           <p>指定されたスイーツ記事が見つかりませんでした。</p>
           <p><a href="sweets.html" class="btn btn-solid" style="margin-top:12px;">スイーツ一覧へ戻る</a></p>
         </div>`;
-      document.title = "記事が見つかりません｜グルメ司法書士のスイーツ特設ページ";
+      document.title = "記事が見つかりません｜グル書士のスイーツ特設ページ";
       return;
     }
 
-    document.title = `${report.title}｜グルメ司法書士のスイーツ特設ページ`;
+    document.title = `${report.title}｜グル書士のスイーツ特設ページ`;
 
     const mapSrc = report.mapEmbedUrl
       ? report.mapEmbedUrl
@@ -78,7 +78,7 @@
       <section class="review-block">
         <div class="label">
           <span class="icon">🍰</span>
-          <span>グルメ司法書士の本気スイーツコメント</span>
+          <span>グル書士の本気スイーツコメント</span>
         </div>
         ${reviewParagraphs}
       </section>

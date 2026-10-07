@@ -68,15 +68,15 @@ function renderReviewParagraphs(review) {
 }
 
 /**
- * 「グルメ司法書士の胃袋«登記»ランキング」の★表示HTMLを生成する。
+ * 「グル書士の胃袋«登記»ランキング」の★表示HTMLを生成する。
  * rating は 0〜5 の数値（0.5刻み推奨）。未指定の記事は表示しない。
  */
 function renderStars(rating) {
   const r = Math.max(0, Math.min(5, Number(rating) || 0));
   const pct = (r / 5) * 100;
   return `
-    <div class="rating-block" role="img" aria-label="グルメ司法書士の胃袋登記ランキング：5点満点中${r}点">
-      <span class="rating-label">グルメ司法書士の胃袋«登記»ランキング</span>
+    <div class="rating-block" role="img" aria-label="グル書士の胃袋登記ランキング：5点満点中${r}点">
+      <span class="rating-label">グル書士の胃袋«登記»ランキング</span>
       <span class="stars" style="--rating-pct:${pct}%">★★★★★</span>
       <span class="rating-value">${r.toFixed(1)}</span>
     </div>`;
@@ -111,7 +111,7 @@ function renderStars(rating) {
   });
 })();
 
-/* ---- フローティングバナー：グルメ司法書士のプロフィールへの導線（キラーン演出付き） ---- */
+/* ---- フローティングバナー：グル書士のプロフィールへの導線（キラーン演出付き） ---- */
 (function () {
   // プロフィールページ自体には出さない
   if (/profile\.html/i.test(window.location.pathname)) return;
@@ -119,13 +119,13 @@ function renderStars(rating) {
   const banner = document.createElement("a");
   banner.href = "profile.html";
   banner.className = "profile-float-banner";
-  banner.setAttribute("aria-label", "グルメ司法書士のプロフィールはこちら");
+  banner.setAttribute("aria-label", "グル書士のプロフィールはこちら");
   banner.innerHTML = `
     <span class="pfb-avatar">
       <img src="images/gurushoshi-avatar.jpg" alt="" />
     </span>
     <span class="pfb-text">
-      <strong>グルメ司法書士って、何者？</strong>
+      <strong>グル書士って、何者？</strong>
       <span>プロフィールはこちら ▶</span>
     </span>
     <button type="button" class="pfb-close" aria-label="バナーを閉じる">×</button>

@@ -18,7 +18,7 @@
     const genreInput = form.querySelector('input[name="genre"]:checked');
 
     if (!genreInput) {
-      alert("ジャンルを1つ選んでください。これが決まらないと、グルメ司法書士も出動できません。");
+      alert("ジャンルを1つ選んでください。これが決まらないと、グル書士も出動できません。");
       form.querySelector("#genreGroup").scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
@@ -27,7 +27,7 @@
 
     const subject = `【レストラン相談】${genre}のオススメを求む`;
     const body = [
-      "グルメ司法書士 様",
+      "グル書士 様",
       "",
       "レストランのご相談です。",
       "",
@@ -96,7 +96,7 @@
     });
   }
 
-  /* ---- 1. ヒーローの「グルメ司法書士が«本気»でご相談に乗ります」：金色マーカー下線 ---- */
+  /* ---- 1. ヒーローの「グル書士が«本気»でご相談に乗ります」：金色マーカー下線 ---- */
   const heroWrap = document.querySelector(".profile-hero");
   const heroMarker = document.getElementById("contactMarker");
   if (heroWrap && heroMarker) {
