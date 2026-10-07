@@ -39,7 +39,7 @@
       "よろしくお願いいたします。",
       "",
       "―――――――――――――――――",
-      "本メールは「グルメ司法書士のレストランナビ」お問い合わせフォームより送信されました。",
+      "本メールは「グル書士の本気メシ」お問い合わせフォームより送信されました。",
     ].join("\n");
 
     const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
