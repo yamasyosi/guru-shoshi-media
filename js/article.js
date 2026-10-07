@@ -25,9 +25,7 @@
       ? report.mapEmbedUrl
       : `https://www.google.com/maps?q=${encodeURIComponent(report.mapQuery || report.shopName)}&output=embed`;
 
-    const reviewParagraphs = (Array.isArray(report.review) ? report.review : [String(report.review)])
-      .map((p) => `<p>${escapeHtml(p)}</p>`)
-      .join("");
+    const reviewParagraphs = renderReviewParagraphs(report.review);
 
     // 複数写真がある場合はギャラリー表示、なければ単一写真を表示
     const gallery = Array.isArray(report.photos) && report.photos.length > 0 ? report.photos : null;

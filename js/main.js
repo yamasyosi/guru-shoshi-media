@@ -47,6 +47,27 @@ function getQueryParam(name) {
 }
 
 /**
+ * 本文用の簡易記法（先にHTMLエスケープしてから置換するので安全）
+ *   {{大きく目立たせる}} / [[小さくぼそっとつぶやく]]
+ */
+function renderRichText(str) {
+  return escapeHtml(str)
+    .replace(/\{\{(.+?)\}\}/g, '<span class="t-big">$1</span>')
+    .replace(/\[\[(.+?)\]\]/g, '<span class="t-small">$1</span>');
+}
+
+/** 食レポ本文（段落配列）を<p>に変換。冒頭=リード、「総評：」=まとめボックスとして装飾する */
+function renderReviewParagraphs(review) {
+  const list = Array.isArray(review) ? review : [String(review)];
+  return list
+    .map((p, i) => {
+      const cls = /^総評[：:]/.test(p) ? ' class="review-summary"' : i === 0 ? ' class="review-lead"' : "";
+      return `<p${cls}>${renderRichText(p)}</p>`;
+    })
+    .join("");
+}
+
+/**
  * 「グルメ司法書士の胃袋«登記»ランキング」の★表示HTMLを生成する。
  * rating は 0〜5 の数値（0.5刻み推奨）。未指定の記事は表示しない。
  */
