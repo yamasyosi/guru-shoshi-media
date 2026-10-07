@@ -181,6 +181,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://guru-shoshi-media.vercel.app/article.html?slug=sanada-ginza-six-2</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://guru-shoshi-media.vercel.app/sweets-article.html?slug=kuri-no-uta-shibuya</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
