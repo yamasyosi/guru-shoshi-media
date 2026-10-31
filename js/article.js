@@ -15,11 +15,11 @@
           <p>指定された食レポが見つかりませんでした。</p>
           <p><a href="index.html" class="btn btn-solid" style="margin-top:12px;">トップへ戻る</a></p>
         </div>`;
-      document.title = "記事が見つかりません｜グル書士の本気メシ";
+      document.title = "記事が見つかりません｜グルメ司法書士の本気メシ";
       return;
     }
 
-    document.title = `${report.title}｜グル書士の本気メシ`;
+    document.title = `${report.title}｜グルメ司法書士の本気メシ`;
 
     const mapSrc = report.mapEmbedUrl
       ? report.mapEmbedUrl
@@ -76,7 +76,7 @@
       <section class="review-block">
         <div class="label">
           <span class="icon">🍴</span>
-          <span>グル書士の本気コメント</span>
+          <span>グルメ司法書士の本気コメント</span>
         </div>
         ${reviewParagraphs}
       </section>

@@ -18,7 +18,7 @@
     const genreInput = form.querySelector('input[name="genre"]:checked');
 
     if (!genreInput) {
-      alert("ジャンルを1つ選んでください。これが決まらないと、グル書士も出動できません。");
+      alert("ジャンルを1つ選んでください。これが決まらないと、グルメ司法書士も出動できません。");
       form.querySelector("#genreGroup").scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
@@ -27,7 +27,7 @@
 
     const subject = `【レストラン相談】${genre}のオススメを求む`;
     const body = [
-      "グル書士 様",
+      "グルメ司法書士 様",
       "",
       "レストランのご相談です。",
       "",
@@ -39,7 +39,7 @@
       "よろしくお願いいたします。",
       "",
       "―――――――――――――――――",
-      "本メールは「グル書士の本気メシ」お問い合わせフォームより送信されました。",
+      "本メールは「グルメ司法書士の本気メシ」お問い合わせフォームより送信されました。",
     ].join("\n");
 
     const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -96,7 +96,7 @@
     });
   }
 
-  /* ---- 1. ヒーローの「グル書士が«本気»でご相談に乗ります」：金色マーカー下線 ---- */
+  /* ---- 1. ヒーローの「グルメ司法書士が«本気»でご相談に乗ります」：金色マーカー下線 ---- */
   const heroWrap = document.querySelector(".profile-hero");
   const heroMarker = document.getElementById("contactMarker");
   if (heroWrap && heroMarker) {
