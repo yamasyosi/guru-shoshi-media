@@ -18,12 +18,26 @@ const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf
 if (process.env.SITE_URL) cfg.siteUrl = process.env.SITE_URL;
 cfg.siteUrl = cfg.siteUrl.replace(/\/$/, '');
 
+// PCヘッダーに出す項目
 const NAV = [
   { href: '/karakuri/', label: '増額のからくり' },
   { href: '/kijun/', label: '3つの基準' },
-  { href: '/chiryou/', label: '治療中の過ごし方' },
   { href: '/tokuyaku/', label: '弁護士費用特約' },
+  { href: '/column/', label: 'コラム' },
+  { href: '/faq/', label: 'よくある質問' },
+  { href: '/area/santama/', label: '八王子・三多摩' },
+];
+// スマホメニュー（全項目）
+const MENU = [
+  { href: '/karakuri/', label: '増額のからくり' },
+  { href: '/kijun/', label: '自賠責・任意保険・裁判基準' },
+  { href: '/chiryou/', label: '治療中の過ごし方' },
+  { href: '/tokuyaku/', label: '弁護士費用特約【特集】' },
+  { href: '/column/', label: 'コラム' },
+  { href: '/faq/', label: 'よくある質問' },
+  { href: '/area/santama/', label: '八王子・三多摩の方へ' },
   { href: '/hani/', label: '司法書士に頼める範囲' },
+  { href: '/soudan/', label: '無料相談の流れ' },
 ];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -40,10 +54,18 @@ function parse(file) {
 
 function jsonLd(meta, url) {
   const graph = [];
-  const org = { '@type': 'LegalService', '@id': `${cfg.siteUrl}/#office`, name: cfg.officeName, url: `${cfg.siteUrl}/`, telephone: cfg.tel, areaServed: 'JP' };
-  if (meta.path === '/') {
-    graph.push({ '@type': 'WebSite', '@id': `${cfg.siteUrl}/#website`, name: cfg.siteName, url: `${cfg.siteUrl}/`, inLanguage: 'ja', publisher: { '@id': org['@id'] } }, org);
-  } else {
+  const org = {
+    '@type': 'LegalService', '@id': `${cfg.siteUrl}/#office`, name: cfg.officeName, url: `${cfg.siteUrl}/`, telephone: cfg.tel,
+    address: { '@type': 'PostalAddress', addressCountry: 'JP', addressRegion: '東京都', addressLocality: cfg.officeCity, streetAddress: cfg.officeStreet, postalCode: cfg.officeZip },
+    areaServed: (cfg.areaServed || []).map((n) => ({ '@type': 'City', name: n })),
+  };
+  if (meta.path === '/' || meta.localBusiness) {
+    if (meta.path === '/') graph.push({ '@type': 'WebSite', '@id': `${cfg.siteUrl}/#website`, name: cfg.siteName, url: `${cfg.siteUrl}/`, inLanguage: 'ja', publisher: { '@id': org['@id'] } });
+    graph.push(org);
+  }
+  if (meta.path === '/404') {
+    // no structured data
+  } else if (meta.path !== '/') {
     const items = [{ name: 'ホーム', item: `${cfg.siteUrl}/` }];
     if (meta.parent) items.push({ name: meta.parent.label, item: cfg.siteUrl + meta.parent.href });
     items.push({ name: meta.crumb || meta.title, item: url });
@@ -56,27 +78,35 @@ function jsonLd(meta, url) {
       });
     }
   }
-  if (meta.faq && meta.faq.length) {
-    graph.push({ '@type': 'FAQPage', mainEntity: meta.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') } })) });
+  const allFaq = meta.faqGroups ? meta.faqGroups.flatMap((g) => g.items) : meta.faq;
+  if (allFaq && allFaq.length) {
+    graph.push({ '@type': 'FAQPage', mainEntity: allFaq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') } })) });
   }
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 }
 
 function header(current) {
-  const links = NAV.map((n) => `<a href="${n.href}"${n.href === current ? ' aria-current="page"' : ''}>${n.label}</a>`).join('');
+  const lk = (list) => list.map((n) => `<a href="${n.href}"${n.href === current ? ' aria-current="page"' : ''}>${n.label}</a>`).join('');
+  const links = lk(NAV);
   return `<header class="hd"><div class="wrap hd-in">
 <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">示</span><span>${esc(cfg.siteName)}<small>${esc(cfg.siteTagline)}</small></span></a>
 <nav class="nav" aria-label="メインメニュー">${links}<a class="cta-mini" href="/soudan/">無料相談</a></nav>
-<details class="menu"><summary aria-label="メニューを開く">☰ メニュー</summary><div class="menu-list">${links}<a href="/soudan/">無料相談の流れ</a></div></details>
+<details class="menu"><summary aria-label="メニューを開く">☰ メニュー</summary><div class="menu-list">${lk(MENU)}</div></details>
 </div></header>`;
 }
 
 function breadcrumb(meta) {
   if (meta.path === '/' || meta.path === '/404') return '';
   const parts = ['<li><a href="/">ホーム</a></li>'];
+  if (meta.parent && meta.parent.href === meta.path) return '';
   if (meta.parent) parts.push(`<li><a href="${meta.parent.href}">${esc(meta.parent.label)}</a></li>`);
   parts.push(`<li aria-current="page">${esc(meta.crumb || meta.title)}</li>`);
   return `<nav class="bc wrap" aria-label="パンくずリスト"><ol>${parts.join('')}</ol></nav>`;
+}
+
+function faqGroupsHtml(groups) {
+  const nav = `<nav class="faq-cats" aria-label="質問のカテゴリ">${groups.map((g) => `<a href="#${g.id}">${esc(g.title)}<span>${g.items.length}</span></a>`).join('')}</nav>`;
+  return nav + groups.map((g) => `<section class="faq" aria-labelledby="${g.id}"><h2 id="${g.id}">${esc(g.title)}</h2>${g.items.map((f) => `<details><summary>${esc(f.q)}</summary><div class="a"><p>${f.a}</p></div></details>`).join('')}</section>`).join('');
 }
 
 function faqHtml(faq) {
@@ -96,8 +126,9 @@ function footer() {
   return `<footer class="ft"><div class="wrap">
 <div class="ft-grid">
 <div><h3>${esc(cfg.siteName)}</h3><p>${esc(cfg.siteTagline)}</p><p>運営：${esc(cfg.officeName)}</p></div>
-<div><h3>基礎知識</h3><ul><li><a href="/karakuri/">弁護士・司法書士が入ると増額するからくり</a></li><li><a href="/kijun/">自賠責・任意保険・裁判基準の違い</a></li><li><a href="/chiryou/">治療中の過ごし方</a></li></ul></div>
+<div><h3>基礎知識</h3><ul><li><a href="/karakuri/">弁護士・司法書士が入ると増額するからくり</a></li><li><a href="/kijun/">自賠責・任意保険・裁判基準の違い</a></li><li><a href="/chiryou/">治療中の過ごし方</a></li><li><a href="/faq/">よくある質問</a></li><li><a href="/column/">コラム一覧</a></li></ul></div>
 <div><h3>保険・依頼</h3><ul><li><a href="/tokuyaku/">弁護士費用特約の完全ガイド</a></li><li><a href="/hani/">司法書士に頼める範囲（140万円）</a></li><li><a href="/soudan/">無料相談の流れ</a></li></ul></div>
+<div><h3>対応エリア</h3><ul><li><a href="/area/santama/">三多摩（多摩地域）の交通事故</a></li><li><a href="/area/hachioji/">八王子市の交通事故</a></li></ul><p class="small">${esc(cfg.officeAddress)}</p></div>
 </div>
 <p class="disc">本サイトは交通事故（人身事故）の民事上の損害賠償・示談交渉に関する一般的な情報提供を目的としています。金額は主に2020年4月1日以降に発生した事故を前提とした目安であり、個別の事案での結果を保証するものではありません。認定司法書士が代理できるのは、1件の請求額が140万円以下の民事紛争に限られます（司法書士法3条1項6号・7号）。140万円を超える事案は弁護士へのご依頼が必要です。<br>© ${esc(cfg.officeName)}</p>
 </div></footer>`;
@@ -132,7 +163,8 @@ ${header(meta.path)}
 ${breadcrumb(meta)}
 <main id="main">
 ${fill(body)}
-${meta.faq ? `<div class="wrap"><div class="text">${faqHtml(meta.faq)}</div></div>` : ''}
+${meta.faqGroups ? `<div class="wrap"><div class="text">${faqGroupsHtml(meta.faqGroups)}</div></div>` : ''}
+${meta.faq ? `<div class="wrap"><div class="text">${faqHtml(meta.faq)}${meta.faqMore ? `<p><a class="btn btn-line btn-block" href="${meta.faqMore}">よくある質問をすべて見る（30問以上）</a></p>` : ''}</div></div>` : ''}
 ${meta.noCta ? '' : `<div class="wrap"><div class="text">${CTA()}</div></div>`}
 </main>
 ${footer()}
@@ -146,8 +178,21 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 const pages = fs.readdirSync(path.join(SRC, 'pages')).filter((f) => f.endsWith('.html')).sort();
 const sitemap = [];
-for (const f of pages) {
-  const { meta, body } = parse(path.join(SRC, 'pages', f));
+const parsed = pages.map((f) => parse(path.join(SRC, 'pages', f)));
+const columns = parsed.filter((p) => p.meta.column).map((p) => p.meta)
+  .sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+const colCard = (m) => `<a class="card col" href="${m.path}"><span class="col-meta"><span class="cat">${esc(m.column)}</span><time datetime="${m.published}">${m.published.replace(/-/g, '.')}</time></span><h3>${esc(m.h1 || m.title)}</h3><p>${esc(m.excerpt || m.description)}</p></a>`;
+const COLUMN_LIST = () => {
+  const cats = [...new Set(columns.map((c) => c.column))];
+  return cats.map((c) => `<h2 id="cat-${encodeURIComponent(c).replace(/%/g, '')}">${esc(c)}</h2><div class="cards">${columns.filter((m) => m.column === c).map(colCard).join('')}</div>`).join('');
+};
+const COLUMN_LATEST = () => `<div class="cards">${columns.slice(0, 3).map(colCard).join('')}</div>`;
+const COLUMN_RELATED = (self) => `<div class="cards">${columns.filter((m) => m.path !== self).slice(0, 3).map(colCard).join('')}</div>`;
+for (const { meta, body: rawBody } of parsed) {
+  const body = rawBody
+    .replace('<!--COLUMN_LIST-->', COLUMN_LIST)
+    .replace('<!--COLUMN_LATEST-->', COLUMN_LATEST)
+    .replace('<!--COLUMN_RELATED-->', () => COLUMN_RELATED(meta.path));
   const html = render(meta, body);
   const dest = meta.path === '/404' ? path.join(OUT, '404.html') : path.join(OUT, meta.path, 'index.html');
   fs.mkdirSync(path.dirname(dest), { recursive: true });

@@ -31,7 +31,7 @@ a:hover{color:var(--accent)}
 .nav a.cta-mini{background:var(--accent);color:#fff}
 .nav a.cta-mini:hover{background:var(--accent-d)}
 .menu{display:none}
-@media (max-width:960px){
+@media (max-width:1100px){
   .nav{display:none}
   .menu{display:block;position:relative}
   .menu summary{list-style:none;cursor:pointer;white-space:nowrap;padding:8px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-weight:700;color:var(--navy)}
@@ -214,3 +214,26 @@ a.card:hover{border-color:var(--navy-2);box-shadow:0 6px 20px rgba(18,51,91,.1);
 .ft ul{list-style:none;margin:0;padding:0}
 .ft li{margin:.3em 0}
 .ft .disc{border-top:1px solid #2a3e5c;margin-top:24px;padding-top:16px;font-size:12.5px;color:#9fb0c7}
+
+/* FAQ categories */
+.faq-cats{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 4px}
+.faq-cats a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--navy);font-weight:700;font-size:14px;background:#fff}
+.faq-cats a:hover{border-color:var(--navy-2)}
+.faq-cats span{background:var(--soft-2);border-radius:999px;padding:0 7px;font-size:12px}
+
+/* column cards */
+.card.col h3{font-size:16.5px;line-height:1.55}
+.col-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12.5px;color:var(--muted)}
+.col-meta .cat{background:var(--soft-2);color:var(--navy);font-weight:800;border-radius:6px;padding:1px 8px}
+.col-head{font-size:13px;color:var(--muted);margin:0 0 4px}
+.col-head .cat{background:var(--soft-2);color:var(--navy);font-weight:800;border-radius:6px;padding:1px 8px;margin-right:8px}
+
+/* area */
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:12px 0 20px}
+.chips li{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:3px 10px;font-size:14px}
+.chips li.on{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:700}
+.local{background:linear-gradient(160deg,#0f3d36,#1b6b5c);color:#fff;padding:36px 0 40px}
+.local h1{color:#fff;margin:4px 0 10px}
+.local .kicker{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:3px 14px;font-size:13px}
+.local p{color:#dff2ec}
+@media (max-width:1300px){.logo small{display:none}}
